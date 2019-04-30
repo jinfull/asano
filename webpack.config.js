@@ -1,10 +1,10 @@
 var path = require('path');
 
 module.exports = {
-    entry: './frontend/entry.jsx',
+    entry: './frontend/index.jsx',
     output: {
         path: path.resolve(__dirname, 'app', 'assets', 'javascript'),
-        filename: './bundle.js',
+        filename: 'bundle.js',
     },
     module: {
         rules: [
@@ -20,7 +20,7 @@ module.exports = {
             }
         ]
     },
-    devtool: 'source-map',
+    devtool: 'inline-source-map',
     resolve: {
         extensions: ['.js', '.jsx', '*']
     }
