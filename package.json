@@ -25,7 +25,8 @@
     "test": "test"
   },
   "scripts": {
-    "webpack": "webpack --mode=development --watch"
+    "webpack": "webpack --mode=development --watch",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -37,5 +38,9 @@
   "bugs": {
     "url": "https://github.com/jinfull/asano/issues"
   },
-  "homepage": "https://github.com/jinfull/asano#readme"
+  "homepage": "https://github.com/jinfull/asano#readme",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.1.0"
+  }
 }
