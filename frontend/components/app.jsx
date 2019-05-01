@@ -1,5 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import LoginFormContainer from './session_form/login_form_container';
+import SignupFormContainer from './session_form/signup_form_container';
 
 import { Route, 
     Redirect, 
@@ -11,8 +13,13 @@ import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
     <div>
-        <h1>HELLO REACT IS WORKING VERY WELL RIGHT NOW!</h1>
-        <GreetingContainer />
+        <header>
+            <h3>Welcome to Asano!</h3>
+            <GreetingContainer />
+        </header>
+
+        <Route path='/login' component={LoginFormContainer} />
+        <Route path='/signup' component={SignupFormContainer} />
     </div>
 );
 
