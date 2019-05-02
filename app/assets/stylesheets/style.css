@@ -22,7 +22,7 @@ nav.login-signup > a {
     text-decoration: none;
 }
 
-label {
+.session-label {
     font-size: 13px;
     color: #848f99;
     display: block;
@@ -30,6 +30,7 @@ label {
     margin-bottom: 8px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
+    /* padding: 10px; */
 }
 
 label > input.session-input {
@@ -38,6 +39,7 @@ label > input.session-input {
     box-sizing: border-box;
     border-radius: 3px;
     background: #edf7fb;
+    margin-top: 5px;
 }
 
 .top-level-div {

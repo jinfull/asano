@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'sign up') {
             nameInputs = 
                 <div>
-                    <label>First Name
+                    <label className="session-label">First Name
                         <input
                             type='text'
                             value={this.state.first_name}
@@ -81,7 +81,7 @@ class SessionForm extends React.Component {
                         />
                     </label>
 
-                    <label>Last Name
+                    <label className="session-label">Last Name
                         <input
                             type='text'
                             value={this.state.last_name}
@@ -103,7 +103,7 @@ class SessionForm extends React.Component {
                     <div className='login-form'>
                         <br/>
 
-                        <label>Email Address
+                        <label className="session-label">Email Address
                             <input 
                                 type='text'
                                 value={this.state.email}
@@ -115,7 +115,7 @@ class SessionForm extends React.Component {
 
                         {nameInputs}
                         
-                        <label>Password
+                        <label className="session-label">Password
                             <input
                                 type='password'
                                 value={this.state.password}
