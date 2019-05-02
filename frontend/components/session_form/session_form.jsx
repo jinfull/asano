@@ -81,8 +81,6 @@ class SessionForm extends React.Component {
                         />
                     </label>
 
-                    <br/>
-
                     <label>Last Name
                         <input
                             type='text'
