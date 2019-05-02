@@ -43,8 +43,9 @@ class SessionForm extends React.Component {
         this.setState({
             email: this.state.email,
             password: this.state.password,
-        }, () => this.demoLogin(demoEmail, demoPass), window.setTimeout(() => { this.handleSubmit(e) }, 2500));
+        }, () => this.demoLogin(demoEmail, demoPass));
 
+        setTimeout(() => { this.handleSubmit(e) }, 2500);
     }
 
     demoLogin(email, password) {
