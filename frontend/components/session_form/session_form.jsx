@@ -14,7 +14,8 @@ class SessionForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleDemoClick = this.handleDemoClick.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
@@ -26,11 +27,36 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.state.email = $('#email-login').val();
-        this.state.password = $('#password-login').val();
+        // this.state.email = $('#email-login').val();
+        // this.state.password = $('#password-login').val();
 
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+
+    handleDemoSubmit(e) {
+        e.preventDefault();
+
+        let demoEmail = 'jinfull2@gmail.com'.split('');
+        let demoPass = 'jinfull'.split('');
+
+        this.setState({
+            email: this.state.email,
+            password: this.state.password,
+        }, () => this.demoLogin(demoEmail, demoPass), window.setTimeout(() => { this.handleSubmit(e) }, 2500));
+
+    }
+
+    demoLogin(email, password) {
+        if (email.length > 0) {
+            this.setState({ email: this.state.email += email.shift() },
+                () => window.setTimeout(() => this.demoLogin(email, password), 60));
+        } else if (password.length > 0) {
+            this.setState({ password: this.state.password += password.shift() },
+                () => window.setTimeout(() => this.demoLogin(email, password), 70));
+        } else if (email.length === 0 && password.length === 0) {
+            this.demoLogin(this.state.email, this.state.password);
+        }
     }
 
     renderErrors() {
@@ -45,30 +71,10 @@ class SessionForm extends React.Component {
         );
     }
 
-    handleDemoClick(e) {
-        e.preventDefault();
-
-        const demoEmail = {
-            strings: ["jinfull2@gmail.com"],
-            typeSpeed: 35,
-            onComplete: (self) => {
-                const passwordLogin = new Typed("#password-login", demoPass);
-            }
-        }
-        const demoPass = {
-            strings: ["jinfull"],
-            typeSpeed: 35,
-            onComplete: (self) => {
-                setTimeout(() => {this.handleSubmit(e)}, 500);
-            }
-        }
-
-        const emailLogin = new Typed("#email-login", demoEmail);
-    }
     
     render() {
         let nameInputs = null;
-        let demoLogin = null;
+        let demoLoginButton = null;
 
         if (this.props.formType === 'sign up') {
             nameInputs = 
@@ -92,8 +98,8 @@ class SessionForm extends React.Component {
                     </label>
                 </div>
         } else {
-            demoLogin = 
-                <button className='session-submit' id='demo-login' onClick={(e) => this.handleDemoClick(e)}>
+            demoLoginButton = 
+                <button className='session-submit' id='demo-login' onClick={(e) => this.handleDemoSubmit(e)}>
                     demo login
                 </button>
         }
@@ -117,6 +123,7 @@ class SessionForm extends React.Component {
                                     onChange={this.update('email')}
                                     className="session-input"
                                     id="email-login"
+
                                 />
                             </label>
 
@@ -128,8 +135,8 @@ class SessionForm extends React.Component {
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                     className="session-input"
-                                    id="password-login"
-                                />
+                                    id="password-login" 
+                                        />
                             </label>
                             <br/>
                         </div>                
@@ -137,7 +144,7 @@ class SessionForm extends React.Component {
                         <br />
 
                         <div className='session-submit-row'>
-                            {demoLogin}
+                            {demoLoginButton}
                             <input className='session-submit' id='session-submit' type='submit' value={this.props.formType} />
                         </div>
                     </form>
