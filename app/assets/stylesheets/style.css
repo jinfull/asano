@@ -4,20 +4,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav.login-signup {
     font-size: 24px;
 }
+
 nav.login-signup > a {
     text-decoration: none;
 }
@@ -30,51 +29,68 @@ nav.login-signup > a {
     margin-bottom: 8px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
-    /* padding: 10px; */
 }
 
 label > input.session-input {
-    width: 100%;
+    display: flex;
+    align-items: center;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 3px;
     background: #edf7fb;
+    margin: auto;
+    width: 100%;
     margin-top: 5px;
+    
 }
 
 .top-level-div {
-    height: 60%;
-    width: 35%;
+    /* height: 44%; */
+    height: auto;
+    width: 25%;
     background: white;
     border-radius: 0.75%;
-    padding: 10px;
-
+    padding: 65px;
     text-align: center;
 }
 
-/* login button */
-.session-submit {
-    display: inline-flex;
-    align-items: center;
+.session-submit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
 
-    font-family: system-ui;
+.session-submit {
+
     background-color: #14aaf5;
     color: white;
     border-radius: 4px;
-    padding: 11px;
-    margin: 2px;
+    padding: 12px;
     margin-left: auto;
     margin-right: auto;
     
     font-style: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-variant-east-asian: normal;
     font-weight: 250;
     font-stretch: normal;
     font-size: 14px;
     line-height: normal;
 }
 
+.session-submit:hover {
+    background-color: #008ce3;
+}
 
+.login-form {
+    text-align: center;
+}
+
+#session-submit {
+    margin: 0;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+#demo-login {
+    margin: 0;
+}

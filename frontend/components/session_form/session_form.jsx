@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Typed from 'typed.js';
+// sourced from 
+// Matt Boldt: https://mattboldt.com/demos/typed-js/
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -32,11 +34,11 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        return(
+        return (
             <ul>
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
-                    {error}
+                        {error}
                     </li>
                 ))}
             </ul>
@@ -65,13 +67,12 @@ class SessionForm extends React.Component {
     }
     
     render() {
-        
-
         let nameInputs = null;
+        let demoLogin = null;
 
         if (this.props.formType === 'sign up') {
             nameInputs = 
-                <div>
+                <div className="name-inputs-label">
                     <label className="session-label">First Name
                         <input
                             type='text'
@@ -90,45 +91,57 @@ class SessionForm extends React.Component {
                         />
                     </label>
                 </div>
-            
+        } else {
+            demoLogin = 
+                <button className='session-submit' id='demo-login' onClick={(e) => this.handleDemoClick(e)}>
+                    demo login
+                </button>
         }
 
         return (
             <div className='login-form-container'>
-                <form onSubmit={this.handleSubmit} className='login-form-box'>
-                    <br/>
-
-                    Please {this.props.formType} or {this.props.otherSessionPostType}.
-                    {this.renderErrors()}
-                    <div className='login-form'>
+                <div id='centered-session-div'>
+                    <form onSubmit={this.handleSubmit} className='login-form-box'>
                         <br/>
 
-                        <label className="session-label">Email Address
-                            <input 
-                                type='text'
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="session-input"
-                                id="email-login"
-                            />
-                        </label>
-
-                        {nameInputs}
-                        
-                        <label className="session-label">Password
-                            <input
-                                type='password'
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="session-input"
-                                id="password-login"
-                            />
-                        </label>
+                        Please {this.props.formType} or {this.props.otherSessionPostType}.
                         <br/>
-                        <button className='session-submit' onClick={(e) => this.handleDemoClick(e)}>demo login</button>
-                        <input className='session-submit' type='submit' value={this.props.formType} />
-                    </div>                
-                </form>
+
+                        <div className='login-form'>
+                            <br/>
+
+                            <label className="session-label">Email Address
+                                <input 
+                                    type='text'
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="session-input"
+                                    id="email-login"
+                                />
+                            </label>
+
+                            {nameInputs}
+                            
+                            <label className="session-label">Password
+                                <input
+                                    type='password'
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="session-input"
+                                    id="password-login"
+                                />
+                            </label>
+                            <br/>
+                        </div>                
+                        {this.renderErrors()}
+                        <br />
+
+                        <div className='session-submit-row'>
+                            {demoLogin}
+                            <input className='session-submit' id='session-submit' type='submit' value={this.props.formType} />
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }
