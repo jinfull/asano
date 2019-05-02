@@ -17,7 +17,6 @@ const App = () => (
     <div className='top-level-div'>
         <div>
             <header>
-                <h3>Welcome to Asano!</h3>
                 <GreetingContainer />
             </header>
 
