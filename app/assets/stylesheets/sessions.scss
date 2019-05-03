@@ -1,0 +1,145 @@
+// .app-div {
+//     header {
+//         nav {
+
+//         }
+//     }
+
+//     .sessions-top-div {
+//         .sessions-second-div{
+
+//         }
+//     }
+// }
+
+
+html, body {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root { 
+    height: inherit;
+    width: inherit;
+}
+
+.app-div {
+    height: inherit;
+    width: inherit;
+}
+
+.greeting {
+    padding: 8px;
+    text-align: right;
+    background: whitesmoke;
+}
+
+.sessions-top-div {
+    height: inherit;
+    width: inherit;
+    background: linear-gradient(to top right, rgba(255, 82, 99, 0.9) 10%, rgba(255, 115, 129, 0.9) 65%, rgba(252, 189, 1, 0.9) 125%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessions-second-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 55%;
+    width: 35%;
+    border-radius: 3.5px;
+}
+
+.login-form-box {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-form, .name-inputs-label {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.session-label {
+    font-size: 13px;
+    color: #848f99;
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    padding: 5px;
+}
+
+input.session-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #edf7fb;
+    margin: auto;
+    width: 90%;
+    margin-top: 5px;
+}
+
+.session-submit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+
+.session-submit:hover {
+    background-color: #008ce3;
+}
+
+.login-form {
+    text-align: center;
+}
+
+#session-submit {
+    margin: 0;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.session-submit {
+    background-color: #14aaf5;
+    color: white;
+    border-radius: 4px;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-style: normal;
+    font-weight: 250;
+    font-stretch: normal;
+    font-size: 14px;
+    line-height: normal;
+}
+
+#demo-login {
+    margin: 0;
+}
+
+#login-signup {
+    font-size: 18px;
+
+}
+
+nav#login-signup > a {
+    text-decoration: none;
+}

@@ -1,5 +1,5 @@
-#root {
-    height: 100%;
+.sessions-div {
+    height: inherit;
     background: linear-gradient(to top right, rgba(255, 82, 99, 0.9) 10%, rgba(255, 115, 129, 0.9) 65%, rgba(252, 189, 1, 0.9) 125%);
     display: flex;
     justify-content: center;
@@ -21,7 +21,12 @@ nav.login-signup > a {
     text-decoration: none;
 }
 
-.session-label {
+.name-inputs-label {
+    width: 100%;
+}
+
+
+label.session-label {
     font-size: 13px;
     color: #848f99;
     display: block;
@@ -29,7 +34,14 @@ nav.login-signup > a {
     margin-bottom: 8px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
+    width: 100%;
 }
+
+#session-input {
+    width: 100%;
+}
+
+/* 
 
 label > input.session-input {
     display: flex;
@@ -41,18 +53,13 @@ label > input.session-input {
     margin: auto;
     width: 100%;
     margin-top: 5px;
-    
+} */
+
+.app-div {
+    height: 100%;
 }
 
-.top-level-div {
-    /* height: 44%; */
-    height: auto;
-    width: 25%;
-    background: white;
-    border-radius: 0.75%;
-    padding: 65px;
-    text-align: center;
-}
+
 
 .session-submit-row {
     display: flex;
@@ -81,8 +88,26 @@ label > input.session-input {
     background-color: #008ce3;
 }
 
-.login-form {
+.login-form-container {
+    /* height: 55%; */
+    height: auto;
+    width: 33.5%;
+    background: white;
+    border-radius: 0.75%;
+    padding: 15px;
     text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.login-form-box {
+    display: flex;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 15px;
+    width: 100%;
 }
 
 #session-submit {
@@ -94,3 +119,4 @@ label > input.session-input {
 #demo-login {
     margin: 0;
 }
+

@@ -14,12 +14,11 @@ import { Route,
 import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
-    <div className='top-level-div'>
-        <div>
-            <header>
-                <GreetingContainer />
-            </header>
-            {/* <AuthRoute path='/' /> */}
+    <div className='app-div'>
+        <header>
+            <GreetingContainer />
+        </header>
+        <div className='sessions-div'>
             <AuthRoute path='/login' component={LoginFormContainer} />
             <AuthRoute path='/signup' component={SignupFormContainer} />
         </div>
