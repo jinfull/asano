@@ -41,19 +41,6 @@ label.session-label {
     width: 100%;
 }
 
-/* 
-
-label > input.session-input {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    background: #edf7fb;
-    margin: auto;
-    width: 100%;
-    margin-top: 5px;
-} */
 
 .app-div {
     height: 100%;
@@ -89,7 +76,6 @@ label > input.session-input {
 }
 
 .login-form-container {
-    /* height: 55%; */
     height: auto;
     width: 33.5%;
     background: white;
