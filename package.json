@@ -42,7 +42,7 @@
   "homepage": "https://github.com/jinfull/asano#readme",
   "engines": {
     "node": "10.13.0",
-    "npm": "6.1.0"
+    "npm": "6.4.1"
   },
   "devDependencies": {
     "file-loader": "^3.0.1",
