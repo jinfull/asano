@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 
+import Greeting from '../greeting/greeting_container';
+
 class Splash extends React.Component {
     render() {
         return (
-            <h2>helllo</h2>
+            <Greeting />
         );
     }
 }

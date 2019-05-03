@@ -1,5 +1,5 @@
 .sessions-div {
-    height: inherit;
+    height: 100vh;
     background: linear-gradient(to top right, rgba(255, 82, 99, 0.9) 10%, rgba(255, 115, 129, 0.9) 65%, rgba(252, 189, 1, 0.9) 125%);
     display: flex;
     justify-content: center;
@@ -39,6 +39,7 @@ label.session-label {
 
 #session-input {
     width: 100%;
+    border: 1px solid lightgray;
 }
 
 

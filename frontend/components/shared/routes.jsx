@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import GreetingContainer from '../greeting/greeting_container';
 import Splash from '../splash/splash';
 
 const mSTP = (state) => {
@@ -15,6 +16,7 @@ const mSTP = (state) => {
 const selectRoutes = loggedIn => {
     if (loggedIn) {
         return <Switch>
+            <GreetingContainer />
             <Route path='/' component={Splash} />
         </Switch>
     } else {
