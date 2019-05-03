@@ -1,9 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import LoginFormContainer from './session_form/login_form_container';
-import SignupFormContainer from './session_form/signup_form_container';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Routes from './shared/routes';
 
 import { Route, 
     Redirect, 
@@ -18,11 +16,10 @@ const App = () => (
         <header>
             <GreetingContainer />
         </header>
-        <div className='sessions-div'>
-            <AuthRoute path='/login' component={LoginFormContainer} />
-            <AuthRoute path='/signup' component={SignupFormContainer} />
-        </div>
+        <Routes />
     </div>
 );
 
 export default App;
+
+// 100vh
