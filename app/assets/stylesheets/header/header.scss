@@ -1,9 +1,24 @@
+.header-div {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
 .header-group {
     padding: 10px;
     width: auto;
     display: flex;
     justify-content: flex-end;
+    margin-top: 3px;
+}
 
+#login-signup-header {
+    margin-top: 6.5px;
+}
+
+
+nav.header-group {
+    margin-top: 3px;
 }
 
 .header-name {
@@ -12,4 +27,26 @@
 
 .header-logo {
     margin: 5px;
+}
+
+.logo {
+    background-image: image-url('logo.png');
+    height: 52px;
+    width: 158px;
+    // z-index: 100;
+}
+
+.header-logout {
+    background-color: #14aaf5;
+    color: white;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 250;
+    font-stretch: normal;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.header-logout:hover {
+    background-color: #008ce3;
 }
