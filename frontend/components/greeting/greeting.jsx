@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// import logo from './logo.png';
 
 
 const Greeting = ({ currentUser, logout }) => {
@@ -22,7 +22,7 @@ const Greeting = ({ currentUser, logout }) => {
     
     return (
         <div>
-            {/* <div>{logo}</div> */}
+            {/* <img src={logo} /> */}
             <div className='header-logo'>mylogo</div>
             <div>{currentUser ? personalGreeting() : sessionLinks()}</div>
         </div>
