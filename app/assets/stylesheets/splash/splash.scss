@@ -3,3 +3,38 @@
     width: 100%;
     background: white;
 }
+
+.splash-top {
+    font-family: gordita,Helvetica Neue,Helvetica,sans-serif;
+    line-height: 1.25;
+    font-weight: 400;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    // width: 80%;
+    margin: 0px 25% 0px 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.splash-second{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#splash-h1 {
+    font-size: 48px;
+    line-height: 1.25;
+    font-weight: 400;
+    padding-top: 85px;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+}
+
+#splash-h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 20px;
+    padding-top: 15px;
+}

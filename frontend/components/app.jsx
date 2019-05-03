@@ -13,6 +13,9 @@ import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
     <div className='app-div'>
+        {/* <header>
+            <GreetingContainer />
+        </header> */}
         <Routes />
     </div>
 );

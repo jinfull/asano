@@ -15,10 +15,12 @@ const mSTP = (state) => {
 
 const selectRoutes = loggedIn => {
     if (loggedIn) {
-        return <Switch>
-            <GreetingContainer />
-            <Route path='/' component={Splash} />
-        </Switch>
+        return (
+            <>
+                <GreetingContainer />
+                <Route path='/' component={Splash} />
+            </>
+        )
     } else {
         return <Switch>
             <Route path='/login' component={LoginFormContainer} />
