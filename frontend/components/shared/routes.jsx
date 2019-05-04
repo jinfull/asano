@@ -6,6 +6,8 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import GreetingContainer from '../greeting/greeting_container';
 import Splash from '../splash/splash';
+import Home from '../home/home';
+import NavBar from '../nav_bar/nav_bar_container';
 
 const mSTP = (state) => {
     return {
@@ -17,17 +19,23 @@ const selectRoutes = loggedIn => {
     if (loggedIn) {
         return (
             <>
-                {/* <GreetingContainer /> */}
-                <Route path='/' component={Splash} />
+                <GreetingContainer />
+                <NavBar />
+                <Route path='/home' component={Home} />
             </>
         )
     } else {
-        return <Switch>
-            <Route path='/login' component={LoginFormContainer} />
-            <Route path='/signup/:email' component={SignupFormContainer} />
-            <Route path='/signup' component={SignupFormContainer} />
-            <Route path='/' component={Splash} />
-        </Switch>
+        return (
+            <>
+                <Switch>
+                    <Route path='/login' component={LoginFormContainer} />
+                    <Route path='/signup/:email' component={SignupFormContainer} />
+                    <Route path='/signup' component={SignupFormContainer} />
+                    <Route path='/splash' component={Splash} />
+                </Switch>
+                {/* <Route path='/login' component={LoginFormContainer} /> */}
+            </>
+        )
     }
 }
 
