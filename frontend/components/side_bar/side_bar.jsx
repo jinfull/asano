@@ -1,17 +1,17 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class NavBar extends React.Component {
+class SideBar extends React.Component {
 
 
 
     render() {
         return (
-            <div>
-                NAV BAR TEST
+            <div className='side-bar-top'>
+                Side BAR TEST
             </div>
         )
     }
 }
 
-export default withRouter(NavBar);
+export default withRouter(SideBar);

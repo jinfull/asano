@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import sessionLinks from '../header/header_session';
+// import sessionLinks from '../header/header_session';
 
 
 const Greeting = ({ currentUser, logout }) => {
@@ -25,7 +25,6 @@ const Greeting = ({ currentUser, logout }) => {
             <div>{currentUser ? personalGreeting() : sessionLinks()}</div>
         </div>
     )
-    
 }
 
 export default Greeting;

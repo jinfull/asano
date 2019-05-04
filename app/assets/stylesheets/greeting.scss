@@ -3,7 +3,9 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid  rgb(214, 219, 221);
-    margin-bottom: 20px;
+    width: 80vw;
+    // height: 30vh
+    // margin-bottom: 20px;
     // border-style: solid;
     // border-width: 0px 0px 1px 0px;
 }
@@ -47,14 +49,13 @@ nav.header-group {
     color: white;
     border-radius: 4px;
     font-style: normal;
-    font-weight: 250;
+    font-weight: 400;
     font-stretch: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: normal;
     padding: 3px;
     padding-left: 5px;
     padding-right: 5px;
-    
 }
 
 .header-logout:hover {
