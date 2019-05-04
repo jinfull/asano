@@ -21,7 +21,7 @@ const Greeting = ({ currentUser, logout }) => {
 
     return (
         <div className='header-div'>
-            <Link to='/'><div className='logo'></div></Link>
+            <Link to='/' className='logo'><div></div></Link>
             <div>{currentUser ? personalGreeting() : sessionLinks()}</div>
         </div>
     )

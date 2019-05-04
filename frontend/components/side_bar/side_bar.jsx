@@ -7,8 +7,9 @@ class SideBar extends React.Component {
 
     render() {
         return (
-            <div className='side-bar-top'>
-                <Link to='/'><div className='sidebar-logo'></div></Link>
+            <div className='side-bar-container'>
+                <Link to='/' className='side-bar-logo'></Link>
+                <div>second div</div>
             </div>
         )
     }

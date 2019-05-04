@@ -1,16 +1,21 @@
-.side-bar-top {
+.side-bar-container {
     background: #151b26;
     width: 18.5vw;
     height: 100vh;
     position: absolute;
     color: whitesmoke;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    
 }
 
-.sidebar-logo {
+.side-bar-logo {
     background-image: image-url('sidebar-logo.png');
     height: 25px;
     width: 125px;
     outline: 0;
+    display: flex;
+    align-items: center;
+    margin: 25px 5px 25px 5px;
 }
