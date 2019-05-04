@@ -7,7 +7,7 @@ import SignupFormContainer from '../session_form/signup_form_container';
 import GreetingContainer from '../greeting/greeting_container';
 import Splash from '../splash/splash';
 import Home from '../home/home';
-import SideBar from '../nav_bar/side_bar_container';
+import SideBar from '../side_bar/side_bar_container';
 
 const mSTP = (state) => {
     return {

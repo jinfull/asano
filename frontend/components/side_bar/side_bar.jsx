@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class SideBar extends React.Component {
 
@@ -8,7 +8,7 @@ class SideBar extends React.Component {
     render() {
         return (
             <div className='side-bar-top'>
-                Side BAR TEST
+                <Link to='/'><div className='sidebar-logo'></div></Link>
             </div>
         )
     }

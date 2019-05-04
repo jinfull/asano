@@ -1,5 +1,16 @@
 .side-bar-top {
-    background: red;
-    width: 20vw;
-    height: 90vh;
+    background: #151b26;
+    width: 18.5vw;
+    height: 100vh;
+    position: absolute;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    background-image: image-url('sidebar-logo.png');
+    height: 25px;
+    width: 125px;
+    outline: 0;
 }
