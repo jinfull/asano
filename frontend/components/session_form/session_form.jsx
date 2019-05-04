@@ -4,12 +4,18 @@ import { withRouter } from 'react-router-dom';
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
+        
         this.state = {
             email: '',
             first_name: '',
             last_name: '',
             password: ''
         };
+
+        if (this.props.match.params.email) {
+            this.state.email = this.props.match.params.email;
+        }
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
@@ -42,7 +48,7 @@ class SessionForm extends React.Component {
             password: this.state.password,
         }, () => this.demoLogin(demoEmail, demoPass));
 
-        setTimeout(() => { this.handleSubmit(e) }, 2500);
+        setTimeout(() => { this.handleSubmit(e); }, 2500);
     }
 
     demoLogin(email, password) {
@@ -143,8 +149,8 @@ class SessionForm extends React.Component {
                         <br />
 
                         <div className='session-submit-row'>
-                            {demoLoginButton}
                             <input className='session-submit' id='session-submit' type='submit' value={this.props.formType} />
+                            {demoLoginButton}
                         </div>
                     </form>
                 </div>
