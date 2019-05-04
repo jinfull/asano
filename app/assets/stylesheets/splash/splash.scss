@@ -41,10 +41,43 @@
 
 #splash-started-input {
     margin-top: 30px;
-    width: 55%;
+    width: 38%;
+    border-radius: 4px;
+    padding: 11px;
+
+    
+    font-style: normal;
+    font-weight: 250;
+    font-stretch: normal;
+    font-size: 14px;
+    line-height: normal;
+    border: 1.5px solid lightgray;
+}
+
+#splash-started-input:focus {
+    border: 1.5px solid #635ac7;
 }
 
 #splash-started-button {
     margin-left: 25px;
     width: 25%;
+
+    background-color: #796eff;
+    color: white;
+    border-radius: 4px;
+    padding: 12px;
+    
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-size: 14px;
+    line-height: normal;
+}
+
+#splash-started-button:hover {
+    background-color: #635ac7
+}
+
+.splash-form {
+    margin-top: 21px;
 }
