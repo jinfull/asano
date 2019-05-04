@@ -19,7 +19,6 @@ const Greeting = ({ currentUser, logout }) => {
         </hgroup>
     );
 
-    
     return (
         <div className='header-div'>
             <div className={'logo'}><Link to='/'></Link></div>
