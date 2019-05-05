@@ -5,7 +5,7 @@
     position: absolute;
     color: whitesmoke;
     display: flex;
-    align-items: center;
+    // align-items: center;
     flex-direction: column;
     
 }
@@ -18,4 +18,8 @@
     display: flex;
     align-items: center;
     margin: 25px 5px 25px 5px;
+}
+
+.side-bar-contents-container {
+    margin-left: 10%;
 }
