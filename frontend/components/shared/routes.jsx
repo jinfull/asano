@@ -27,14 +27,12 @@ const selectRoutes = loggedIn => {
     } else {
         return (
             <>
-                {/* <Route path='/login' component={LoginFormContainer} /> */}
                 <Switch>
                     <Route path='/login' component={LoginFormContainer} />
                     <Route path='/signup/:email' component={SignupFormContainer} />
                     <Route path='/signup' component={SignupFormContainer} />
                     <Route path='/' component={Splash} />
                 </Switch>
-                {/* <Route path='/login' component={LoginFormContainer} /> */}
             </>
         )
     }

@@ -39,6 +39,7 @@ class Splash extends React.Component {
                                 <button id='splash-started-button'>Try for free</button>
                             </Link>
                         </div>
+                        <div className='splash-img'></div>
                     </div>
                 </div>
             </>
