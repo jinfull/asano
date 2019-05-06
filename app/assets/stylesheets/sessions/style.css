@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 html, body {
@@ -81,7 +82,7 @@ label.session-label {
     width: 25.5%;
     background: white;
     border-radius: 0.75%;
-    padding: 15px;
+    padding: 2% 5% 2% 5%;
     text-align: center;
     display: flex;
     align-content: center;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -116,6 +116,7 @@ class SessionForm extends React.Component {
 
         return (
             <div className='sessions-div'>
+                <Link id='sessions-logo' to='/'></Link>
                 <div className='login-form-container'>
                     <form onSubmit={this.handleSubmit} className='login-form-box'>
                         <br/>

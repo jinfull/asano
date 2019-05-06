@@ -146,3 +146,12 @@ input#session-submit {
 nav#login-signup > a {
     text-decoration: none;
 }
+
+#sessions-logo {
+    background-image: image-url('sessions-logo.png');
+    display: flex;
+    align-content: center;
+    margin-bottom: 2.5%;
+    height: 42px;
+    width: 208px;
+}
