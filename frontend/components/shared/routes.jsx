@@ -6,7 +6,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import GreetingContainer from '../greeting/greeting_container';
 import Splash from '../splash/splash';
-import Home from '../home/home';
+import HomeContainer from '../home/home_container';
 import SideBar from '../side_bar/side_bar_container';
 import HeaderContainer from '../header/header_container';
 
@@ -25,7 +25,7 @@ const selectRoutes = loggedIn => {
                 <SideBar />
                 <HeaderContainer />
                 <Switch>
-                    <Route path='/home' component={Home} />
+                    <Route path='/home' component={HomeContainer} />
                 </Switch>
             </>
         )
