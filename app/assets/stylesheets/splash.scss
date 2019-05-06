@@ -27,7 +27,7 @@
     font-size: 48px;
     line-height: 1.25;
     font-weight: 400;
-    padding-top: 85px;
+    padding-top: 25px;
     text-rendering: optimizeLegibility;
     margin: 0;
 }
@@ -85,10 +85,10 @@
 }
 
 #splash-img {
-    // background-image: image-url('splash-img.png');
-
-    height: 200px;
-    width: 200px;
+    background-image: image-url('splash-image.png');
+    height: 449px;
+    width: 973px;
     outline: 0;
     border: none;
+    overflow: hidden;
 }
