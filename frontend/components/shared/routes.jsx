@@ -8,6 +8,7 @@ import GreetingContainer from '../greeting/greeting_container';
 import Splash from '../splash/splash';
 import Home from '../home/home';
 import SideBar from '../side_bar/side_bar_container';
+import HeaderContainer from '../header/header_container';
 
 import {AuthRoute, ProtectedRoute} from '../../util/route_util';
 
@@ -22,7 +23,7 @@ const selectRoutes = loggedIn => {
         return (
             <>
                 <SideBar />
-                <GreetingContainer />
+                <HeaderContainer />
                 <Switch>
                     <Route path='/home' component={Home} />
                 </Switch>

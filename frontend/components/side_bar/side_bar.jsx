@@ -8,7 +8,6 @@ class SideBar extends React.Component {
         this.props.requestProjects();
     }
 
-
     render() {
         const projects = this.props.projects.map(project => {
             return (
