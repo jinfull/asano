@@ -60,7 +60,7 @@
 
 #splash-started-button {
     margin-left: 25px;
-    width: 25%;
+    width: 13%;
 
     background-color: #796eff;
     color: white;
@@ -72,6 +72,7 @@
     font-stretch: normal;
     font-size: 14px;
     line-height: normal;
+    border: none;
 }
 
 #splash-started-button:hover {
@@ -80,6 +81,7 @@
 
 .splash-form {
     margin-top: 21px;
+    height: 99px;
 }
 
 #splash-img {

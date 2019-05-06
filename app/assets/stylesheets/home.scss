@@ -1,0 +1,22 @@
+.home-main-div {
+    margin-left: 18.5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home-image {
+    margin-top: 20px;
+    background-image: image-url('home-image.png');
+    height: 144px;
+    width: 305px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#home-welcome {
+    display: flex;
+    justify-content: center;
+}

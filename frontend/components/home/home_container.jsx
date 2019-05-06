@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom';
 
 import Home from './home';
 
-const mSTP = ({ errors }) => {
-    // return {
-    //     errors: errors.session,
-    //     formType: 'log in',
-    //     otherSessionPostType: <Link to="/signup">sign up</Link>
-    // };
+const mSTP = ({ session, entities: { users } }) => {
+    debugger
+    return {
+        currentUser: users[session.id]
+    };
 };
 
 const mDTP = dispatch => {

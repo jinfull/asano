@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <div className='header-group' id='login-signup-header'>
-            <Link to='/login'>Login</Link>
-            &nbsp;or&nbsp;
-            <Link to='signup'>Sign Up!</Link>            
+            <Link to='/login' id="login-greeting">Log In</Link>
+            &nbsp;&nbsp;
+            <Link to='signup'><button id='try-free-greeting'>Try for free</button></Link>            
         </div>
     );
         

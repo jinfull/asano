@@ -1,10 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class Home extends React.Component {
-    render() {
-        return (<div>dddd</div>)
-    }
+const Home = (props) => {
+    // debugger
+    return (
+        <div className='home-main-div'>
+            <div id='home-image'></div>
+            {/* <div id="home-welcome">Welcome to Asana {currentUser.first_name}!</div> */}
+        </div>
+    )
 }
 
 export default withRouter(Home);
