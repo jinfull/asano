@@ -82,6 +82,11 @@
     margin-top: 21px;
 }
 
-.splash-img {
-    background-image: image-url('splash-img.png');
+#splash-img {
+    // background-image: image-url('splash-img.png');
+
+    height: 200px;
+    width: 200px;
+    outline: 0;
+    border: none;
 }

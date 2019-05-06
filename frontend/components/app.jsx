@@ -21,5 +21,3 @@ const App = () => (
 );
 
 export default App;
-
-// 100vh

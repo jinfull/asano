@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
@@ -9,9 +9,11 @@ import Splash from '../splash/splash';
 import Home from '../home/home';
 import SideBar from '../side_bar/side_bar_container';
 
+import {AuthRoute, ProtectedRoute} from '../../util/route_util';
+
 const mSTP = (state) => {
     return {
-        loggedIn: !!state.session.id
+        loggedIn: Boolean(state.session.id)
     };
 };
 
@@ -21,7 +23,9 @@ const selectRoutes = loggedIn => {
             <>
                 <SideBar />
                 <GreetingContainer />
-                <Route path='/home' component={Home} />
+                <Switch>
+                    <Route path='/home' component={Home} />
+                </Switch>
             </>
         )
     } else {
