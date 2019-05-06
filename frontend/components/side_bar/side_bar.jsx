@@ -21,12 +21,22 @@ class SideBar extends React.Component {
         return (
             <div className='side-bar-wrapper'>
                 <div className='side-bar-container'>
+
                     <div className='side-bar-contents-container'>
-                        <Link to='/' className='side-bar-logo'></Link>
+                        <Link to='/home' className='side-bar-logo'></Link>
+                        <Link to='/home' className='side-bar-home-main'>
+                            <div className='side-bar-home-logo'></div>
+                            <div className='side-bar-home'>Home</div>
+                        </Link>
+                        <div className='marketing-team'>Marketing Team</div>
                         <ul className='side-bar-projects'>
                             {projects}
                         </ul>
                     </div>
+                
+                
+                
+                
                 </div>
             </div>
         )

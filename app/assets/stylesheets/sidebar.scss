@@ -8,7 +8,7 @@
     width: 18.5vw;
     height: 100%;
     position: fixed;
-    color: rgb(247, 128, 128);
+    color: rgb(233, 233, 233);
     display: flex;
     // align-items: center;
     flex-direction: column;
@@ -32,3 +32,36 @@
     width: 80%;
 }
 
+.side-bar-home-main {
+    display: flex;
+    border-bottom: 2px solid #222b37;
+    // margin-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.side-bar-home-main:hover {
+    background: rgba(255,255,255,0.08);
+    border-radius: 5%;
+}
+
+.side-bar-home {
+    margin: 7px 0px 12px 0px;
+    font-size: 18px;   
+    color: whitesmoke;
+    text-decoration: none; 
+}
+
+.side-bar-home-logo {
+    background-image: image-url('home.png');
+    height: 32px;
+    width: 32px;
+    margin-right: 7.5px;
+    margin-left: 10px;
+}
+
+.marketing-team {
+    margin-bottom: 25px;
+}
