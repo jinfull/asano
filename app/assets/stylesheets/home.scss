@@ -7,6 +7,13 @@
     padding: 1% 10% 2% 10%;
 }
 
+.home-main-div-2 {
+    margin-left: 18.5vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
 #home-image {
     // margin-top: 20px;
     background-image: image-url('home-image.png');
@@ -32,5 +39,163 @@
     color: #848f99;
     font-size: 16px;
     text-align: center;
+}
 
+.home-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+.home-section-head {
+    font-size: 16px;
+    font-weight: 500;
+    color: #151b26;
+    margin: 3% 0px 3% 0px;
+    padding: 3% 0% 2% 0%;
+    border-bottom: 2px solid #edf1f2;
+    width: inherit;
+}
+
+#no-tasks-due {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 499;
+    color: #848f99;
+    font-size: 13px;
+    margin-top: 2%;
+}
+
+#tasks-due {
+    margin-bottom: 2%;
+}
+
+#home-recent-projects {
+    margin-top: 1.5%;
+}
+
+//////// below recent projects tile containers and etc
+// $colors: (
+//     1: #e362e3,
+//     2: #ea4e9d,
+//     3: #e8384f,
+//     4: #e362e3,
+//     5: #7a6ff0,
+//     6: #aa62e3,
+//     7: #cdf22b,
+//     8: #ffe572
+// );
+
+
+.tile-item{
+    margin-bottom: 2%;
+    margin-left: 1%;
+    width: 19%;
+    height: auto;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.tile-item:hover {
+    background: #d5dce0;
+    border-radius: 13%;
+    // padding: 10px;
+}
+
+
+.projects-tile-container {
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.ul-grid-container {
+    // display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tile-name {
+    height: 128px;
+    width: 128px;
+}
+
+.tile-icon {
+    background-image: image-url('note.png');
+    height: 38px;
+    width: 38px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-icon-wrapper {
+    padding: 0px;
+    background-color:  #ffe572;
+    border-radius: 20%;
+    width: 114px;
+    height: 114px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 15px;
+}  
+
+#e362e3 {
+    background: #e362e3;
+}
+#ea4e9d {
+    background: #ea4e9d;
+}
+#e8384f {
+    background: #e8384f;
+}
+#e311e3 {
+    background: #e311e3;
+}
+#7a6ff0 {
+    background: #7a6ff0;
+}
+#aa62e3 {
+    background: #aa62e3;
+}
+#cdf22b {
+    background: #cdf22b;
+}
+#ffe572 {
+    background: #ffe572;
+}
+
+
+
+// @each $key, $color in $colors {
+//     .ul-grid-container li[key=#{$key}] {
+//         background: $color;
+//     }
+// }
+
+.tile-icon-wrapper-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.tile-project-name {
+    // margin: 3% 1% 3% 1%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 8px 3px 2px 3px;
+    text-decoration: none;
+}
+
+.tile-link {
+    text-decoration: none;
 }
