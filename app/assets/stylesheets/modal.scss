@@ -15,7 +15,7 @@
   transform: translate(-50%, -50%);
   border-radius: 1%;
   background: white;
-  height: 300px;
+  height: 350px;
   max-height: 500px;
   width: 500px;
   padding: 20px;
@@ -44,16 +44,79 @@
 
 .project-form-label {
   color: #848f99;
-  size: 24px;
+  font-size: 12px;
   font-weight: 300;
   width: 100%;
+  margin: 2% 0% 2% 0%;
 }
 
 .project-input {
   border: 1px solid #d5dce0;
-  border-radius: 4px;
+  border-radius: 2.5px;
+  width: 460px;
+  margin: 2% 0% 2% 0%;
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 97.5%;
 }
 
 .project-input-name {
-    height: 30px;
+  height: 30px;
+}
+
+.project-form-container {
+  width: 100%;
+  padding-top: 16px;
+}
+
+.project-name-div {
+  margin-bottom: 5px;
+}
+
+textarea.project-input {
+  height: 120px;
+}
+
+.project-input:focus {
+  border-color: #9ca6af;
+  box-shadow: inset 0 1px #e0e6e8;
+  outline: none;  
+  -webkit-box-shadow: 0px 0px 5px  #d5dce0;
+}
+
+.button-row {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-cancel {
+  border: 1px solid #b7bfc6;
+  color: #646f79;
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.modal-cancel:hover {
+  background: #f6f8f9;
+  border: 1px solid #646f79;
+}
+
+.create-project-submit {
+  border: 1px solid #b7bfc6;
+  color: white;
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: #14aaf5;
+  border: none;
+}
+
+.create-project-submit:hover {
+  background: #008ce3;
+  border-color: #008ce3;
 }
