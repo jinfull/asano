@@ -10,6 +10,7 @@ import HomeContainer from '../home/home_container';
 import SideBar from '../side_bar/side_bar_container';
 import HeaderContainer from '../header/header_container';
 import ProjectShowContainer from '../projects/project_show_container';
+import Modal from '../project_post_modal/projects_modal';
 
 import {AuthRoute, ProtectedRoute} from '../../util/route_util';
 
@@ -23,6 +24,7 @@ const selectRoutes = loggedIn => {
     if (loggedIn) {
         return (
             <>
+                <Modal />
                 <SideBar />
                 <HeaderContainer />
                 <Switch>

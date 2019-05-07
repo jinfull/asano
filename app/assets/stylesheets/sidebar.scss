@@ -63,9 +63,11 @@
 }
 
 .marketing-team {
-    margin-bottom: 10px;
+    // padding-bottom: 5px;
     margin-left: 19px;
-
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .sidebar-link {
@@ -100,10 +102,17 @@
 .marketing-main-div {
     display: flex;
     justify-content: space-between;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
 }
 
 #plus-project {
     margin-right: 17.5px;
     color: whitesmoke;
     text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 34px;
+    padding-bottom: 5px;
 }
