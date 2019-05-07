@@ -91,7 +91,7 @@
 .tile-item{
     margin-bottom: 2%;
     margin-left: 1%;
-    width: 19%;
+    width: 20%;
     height: auto;
     padding: 5px;
     padding-bottom: 10px;
@@ -117,8 +117,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-items: flex-start;
+    width: auto;
 }
 
 .tile-name {

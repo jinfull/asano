@@ -22,6 +22,9 @@ class RecentProjects extends React.Component {
             <div className='projects-tile-container'>
                 <ul className='ul-grid-container'>
                     {projects}
+                    {/* <li className='tile-item'>
+
+                    </li> */}
                 </ul>
             </div>
         )

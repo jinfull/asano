@@ -22,3 +22,8 @@ export const requestSingleProject = (projectId) => dispatch => {
     return ProjectsApiUtil.fetchProject(projectId)
         .then(project => dispatch(receiveProject(project)));
 };
+
+export const createProject = (project) => dispatch => {
+    return ProjectsApiUtil.createProject(project)
+        .then(project => dispatch(receiveProject(project)));
+};

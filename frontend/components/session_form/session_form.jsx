@@ -30,10 +30,14 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        // this.state.email = $('#email-login').val();
-        // this.state.password = $('#password-login').val();
-
         const user = Object.assign({}, this.state);
+        
+        this.setState({
+            email: '',
+            first_name: '',
+            last_name: '',
+            password: ''
+        });
 
         this.props.processForm(user).then(() => {
             this.props.history.push('/home');
@@ -133,7 +137,6 @@ class SessionForm extends React.Component {
                                 onChange={this.update('email')}
                                 className="session-input"
                                 id="session-input"
-
                             />
                         </label>
 
@@ -146,7 +149,7 @@ class SessionForm extends React.Component {
                                 onChange={this.update('password')}
                                 className="session-input"
                                 id="session-input" 
-                                    />
+                            />
                         </label>
                         <br/>
                         
