@@ -5,7 +5,12 @@ const ProjectIndexItem = ({ project }) => {
     return (
         <Link to={`/projects/${project.id}`} className='sidebar-link'>
             <li className='sidebar-li'>
-                {project.name}
+                <div id='sidebar-project-row'>
+                    <div id='bullet-icon'></div>
+                    <div id='sidebar-project-name'>
+                        {project.name}
+                    </div>
+                </div>
             </li>
         </Link>
     )

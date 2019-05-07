@@ -1,4 +1,16 @@
-.project-name {
+.project-body-top {
     margin-left: 18.5vw;
-    padding-left: 1.65%;
+    width: inherit;
+    height: 100%;
+    // border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: #f6f8f9;
+    background-size: cover;
+
+
+}
+.project-body-container {
+    // margin: 5% 10% 5% 10%;
+    // margin-left: 15%
 }

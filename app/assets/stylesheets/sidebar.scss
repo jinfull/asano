@@ -119,3 +119,22 @@
     font-size: 34px;
     padding-bottom: 5px;
 }
+
+#sidebar-project-row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+#bullet-icon {
+    margin-right: 20px;
+    height: 9px;
+    width: 9px;
+    background-color: greenyellow;
+    border-radius: 25%;
+}
+
+#sidebar-project-name {
+    // margin-bottom: 2px;
+}
