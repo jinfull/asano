@@ -31,7 +31,7 @@
 }
 
 #project-header-description {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #project-show-dropdown {
@@ -48,4 +48,24 @@
     align-content: center;
     align-items: center;
     margin-right: 20px;
+}
+
+#arrow-down {
+    background-image: image-url('arrow-down.png');
+    height: 16px;
+    width: 16px;
+    margin-left: 20px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+
+// #arrow-down:hover {
+    
+// }
+
+#project-header-name-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
 }

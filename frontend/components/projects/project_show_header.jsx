@@ -15,7 +15,10 @@ const ProjectShowHeader = (props) => {
             <div className='project-header-info'>
                 <div className='project-header-icon-wrapper' id={sample(colorsArr)}><div id='project-header-icon'></div></div>
                 <div id='project-header-sub-div'>
-                    <div id='project-header-name'>{props.project.name}</div>
+                    <div id='project-header-name-row'>
+                        <div id='project-header-name'>{props.project.name}</div>
+                        <div id='arrow-down' />
+                    </div>
                     <div id='project-header-description'>{props.project.description}</div>
                 </div>
             </div>
