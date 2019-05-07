@@ -5,9 +5,9 @@ import RecentProjects from './recent_projects';
 import { requestProjects } from '../../actions/project_actions';
 
 
-const mSTP = (state, ownProps) => ({
-    projects: Object.keys(state.entities.projects).map(id => state.entities.projects[id])
-});
+const mSTP = (state, ownProps) => {
+    return {projects: Object.keys(state.entities.projects).map(id => state.entities.projects[id])};
+};
 
 const mDTP = dispatch => ({
     requestProjects: () => dispatch(requestProjects())

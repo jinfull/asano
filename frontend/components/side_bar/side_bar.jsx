@@ -28,7 +28,10 @@ class SideBar extends React.Component {
                             <div className='side-bar-home-logo'></div>
                             <div className='side-bar-home'>Home</div>
                         </Link>
-                        <div className='marketing-team'>Marketing Team</div>
+                        <div className='marketing-main-div'>
+                            <div className='marketing-team'>Marketing Team</div>
+                            <Link to='/home' id='plus-project'>+</Link>
+                        </div>
                         <ul className='side-bar-projects'>
                             {projects}
                         </ul>

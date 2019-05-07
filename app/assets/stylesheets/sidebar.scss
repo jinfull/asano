@@ -23,13 +23,13 @@
     outline: 0;
     display: flex;
     align-items: center;
-    margin: 25px 5px 25px 5px;
+    margin: 25px 5px 25px 19px;
 }
 
 .side-bar-contents-container {
-    margin-left: 10%;
-    margin-right: 8%;
-    width: 80%;
+    // margin-left: 2%;
+    margin-right: 3%;
+    width: 100%;
 }
 
 .side-bar-home-main {
@@ -44,7 +44,7 @@
 
 .side-bar-home-main:hover {
     background: rgba(255,255,255,0.08);
-    border-radius: 5%;
+    // border-radius: 5%;
 }
 
 .side-bar-home {
@@ -59,9 +59,51 @@
     height: 32px;
     width: 32px;
     margin-right: 7.5px;
-    margin-left: 10px;
+    margin-left: 19px;
 }
 
 .marketing-team {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+    margin-left: 19px;
+
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.sidebar-li {
+    // margin-left: 19px;
+    // margin-right: 5px;
+    // margin-top: 15px;
+    // padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 19px;
+    padding-right: 8px;
+
+}
+
+.side-bar-projects {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.sidebar-li:hover {
+    background: rgba(255,255,255,0.08);
+
+}
+
+.marketing-main-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#plus-project {
+    margin-right: 17.5px;
+    color: whitesmoke;
+    text-decoration: none;
 }
