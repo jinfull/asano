@@ -6,11 +6,9 @@ import { requestSingleProject } from '../../actions/project_actions';
 const mSTP = (state, ownProps) => {
     const project = state.entities.projects[ownProps.match.params.projectId];
 
-    // debugger
-    return ({
+    return {
         project: project
-        // will need to add tasks in here as part of the tasks mvp
-    });
+    };
 };
 
 const mDTP = dispatch => {

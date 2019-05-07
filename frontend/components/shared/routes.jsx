@@ -26,7 +26,7 @@ const selectRoutes = loggedIn => {
             <>
                 <Modal />
                 <SideBar />
-                <HeaderContainer />
+                {/* <HeaderContainer /> */}
                 <Switch>
                     <Route path='/projects/:projectId' component={ProjectShowContainer} />
                     <Route path='/home' component={HomeContainer} />

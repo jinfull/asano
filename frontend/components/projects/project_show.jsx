@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
+import ProjectShowHeaderContainer from './project_show_header_container';
 
 class ProjectShow extends React.Component {
     componentDidMount() {
-        // console.log(this.props);
         this.props.requestSingleProject(this.props.match.params.projectId);
     }
 
@@ -13,12 +13,9 @@ class ProjectShow extends React.Component {
         if (!project) return null;
 
         return (
-            <div>
-                <div className='project-name'>
-                    {this.props.project.name}
-                </div>
-            </div>
-            // <div>hello</div>
+            <>
+                <ProjectShowHeaderContainer />
+            </>
         );
     }
 }

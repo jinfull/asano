@@ -1,0 +1,50 @@
+.project-header-div {
+    margin-left: 18.5vw;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px 0 rgba(21,27,38,.15);
+    padding-bottom: 9.5px;
+}
+
+.project-header-info {
+    margin-left: 2.1%;
+    margin-top: 1%;
+    display: flex;
+}
+
+#project-header-name {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#project-header-icon {
+    background-image: image-url('header-note.png');
+    height: 38px;
+    width: 38px;
+}
+
+#project-header-sub-div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+}
+
+#project-header-description {
+    margin-top: 10px;
+}
+
+#project-show-dropdown {
+    padding-top: 40px;
+}
+
+.project-header-icon-wrapper {
+    height: 64px;
+    width: 64px;
+    border-radius: 20%;
+    background-color: #ffe572;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-right: 20px;
+}

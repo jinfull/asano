@@ -28,9 +28,6 @@ class Modal extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         
-        // console.log('hello');
-        // debugger
-
         const project = Object.assign({}, this.state);
 
         this.props.createProject(project).then(() => {
@@ -47,7 +44,6 @@ class Modal extends React.Component {
     
     
     render() {
-        // debugger
         if (!this.props.modal) return null;
 
         return (
@@ -95,7 +91,6 @@ class Modal extends React.Component {
 }
 
 const mapStateToProps = state => {
-    // debugger
     return {
         modal: state.ui.modal
     };
