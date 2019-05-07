@@ -75,23 +75,10 @@
     margin-top: 1.5%;
 }
 
-//////// below recent projects tile containers and etc
-// $colors: (
-//     1: #e362e3,
-//     2: #ea4e9d,
-//     3: #e8384f,
-//     4: #e362e3,
-//     5: #7a6ff0,
-//     6: #aa62e3,
-//     7: #cdf22b,
-//     8: #ffe572
-// );
-
-
 .tile-item{
     margin-bottom: 2%;
     margin-left: 1%;
-    width: 20%;
+    width: 22.5%;
     height: auto;
     padding: 5px;
     padding-bottom: 10px;
@@ -121,6 +108,7 @@
     justify-items: flex-start;
     align-items: flex-start;
     width: auto;
+    padding-left: 1%;
 }
 
 .tile-name {
@@ -201,4 +189,23 @@
 
 .tile-link {
     text-decoration: none;
+}
+
+.add-project-container {
+    margin-bottom: 2%;
+    margin-left: 1%;
+    width: 20%;
+    height: auto;
+    padding: 5px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+#add-project-tile {
+    background-color: transparent;
+    border: 3px dotted gray;
+    color: #9ca6af;
+    font-size: 54px;
 }
