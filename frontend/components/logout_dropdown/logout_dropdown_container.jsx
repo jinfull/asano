@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
-import { Route, withRouter } from 'react-router-dom';
 
 import { logout } from '../../actions/session_actions';
-import Header from './header';
+import Dropdown from './logout_dropdown';
 
 const mSTP = ({ session, entities: { users } }, ownProps) => {
     return {
@@ -10,8 +9,10 @@ const mSTP = ({ session, entities: { users } }, ownProps) => {
     };
 };
 
-const mDTP = dispatch => ({
-    logout: () => dispatch(logout())
-});
+const mDTP = dispatch => {
+    return {
+        logout: () => dispatch(logout())
+    };
+};
 
-export default withRouter(connect(mSTP, mDTP)(Header));
+export default connect(mSTP, mDTP)(Dropdown);
