@@ -14,10 +14,10 @@ class ProjectShow extends React.Component {
         if (!project) return null;
 
         return (
-            <>
-                <ProjectShowHeaderContainer />
-                <ProjectShowBodyContainer />
-            </>
+            <div className='project-show-phu'>
+                    <ProjectShowHeaderContainer />
+                    <ProjectShowBodyContainer />
+            </div>
         );
     }
 }

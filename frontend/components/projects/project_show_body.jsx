@@ -6,7 +6,7 @@ class ProjectShowBody extends React.Component {
         return (
             <div className='project-body-top'>
                 <div className='project-body-container'>
-                    JLDFDKFJLKDJLKFDLKDLKFLKJD
+                    
                 </div>
             </div>
         )

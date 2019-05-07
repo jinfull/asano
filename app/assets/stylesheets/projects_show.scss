@@ -1,16 +1,21 @@
 .project-body-top {
     margin-left: 18.5vw;
-    width: inherit;
-    height: 100%;
+    height: calc(100vh - 92.51px);
+    width: calc(100%-18.5vw);
     // border: 2px solid black;
     display: flex;
     justify-content: center;
-    background-color: #f6f8f9;
     background-size: cover;
-
-
+    background-color: #F6F8F9;
 }
 .project-body-container {
-    // margin: 5% 10% 5% 10%;
-    // margin-left: 15%
+    margin-top: 20px;
+    height: 95%;
+    width: 60%;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
