@@ -31,7 +31,6 @@ class SideBar extends React.Component {
                         <div className='marketing-main-div'>
                             <div className='marketing-team'>Marketing Team</div>
                             {this.props.openModal}
-                            {/* <Link to='/home' id='plus-project'>+</Link> */}
                         </div>
                         <ul className='side-bar-projects'>
                             {projects}

@@ -10,7 +10,7 @@ import HomeContainer from '../home/home_container';
 import SideBar from '../side_bar/side_bar_container';
 import HeaderContainer from '../header/header_container';
 import ProjectShowContainer from '../projects/project_show_container';
-import Modal from '../project_post_modal/projects_modal';
+import Modal from '../modal';
 
 import {AuthRoute, ProtectedRoute} from '../../util/route_util';
 
@@ -26,7 +26,6 @@ const selectRoutes = loggedIn => {
             <>
                 <Modal />
                 <SideBar />
-                {/* <HeaderContainer /> */}
                 <Switch>
                     <Route path='/projects/:projectId' component={ProjectShowContainer} />
                     <Route path='/home' component={HomeContainer} />

@@ -20,6 +20,10 @@ export const createProject = project => {
     });
 };
 
-// export const updateProject = project => {
-//     return
-// }
+export const updateProject = project => {
+    return $.ajax({
+        method: 'patch',
+        url: `/api/projects/${project.id}`,
+        data: { project }
+    });
+};

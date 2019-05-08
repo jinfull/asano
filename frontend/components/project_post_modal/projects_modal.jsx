@@ -6,7 +6,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { createProject } from '../../actions/project_actions';
 
 
-class Modal extends React.Component {
+class ProjectsPostModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -103,4 +103,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Modal));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectsPostModal));
