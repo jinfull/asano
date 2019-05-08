@@ -19,7 +19,6 @@ class DeleteProjectModal extends React.Component {
     }
 
     render() {
-        // debugger
         return (
             <div className="modal-background" onClick={this.props.closeModal}>
                 <div className="delete-modal-child" onClick={e => e.stopPropagation()}>

@@ -19,7 +19,7 @@ const receiveErrors = (errors) => ({
     errors
 });
 
-const clearErrors = () => ({
+export const clearErrors = () => ({
         type: CLEAR_ERRORS
 });
 

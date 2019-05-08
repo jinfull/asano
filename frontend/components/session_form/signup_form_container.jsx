@@ -2,14 +2,14 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { signup } from '../../actions/session_actions';
+import { signup, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mSTP = (state, ownProps) => {
     return {
         errors: state.errors.session,
         formType: 'sign up',
-        otherSessionPostType: <Link to="/login">log in</Link>
+        otherSessionPostType: <Link to="/login" onClick={() => dispatch(clearErrors())}>log in</Link>
     };
 };
 

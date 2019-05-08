@@ -8,7 +8,6 @@
 
 
 // const mapStateToProps = (state, ownProps) => {
-//     // debugger
 //     return {
 //         modal: state.ui.modal,
 //         project: state.entities.projects[ownProps.match.params.id]
