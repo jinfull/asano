@@ -8,19 +8,15 @@ import { requestSingleProject, updateProject } from '../../../actions/project_ac
 class EditModal extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     project: null
-        // };
 
         this.state = this.props.project;
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentDidMount() {
-        // debugger
-        this.props.requestSingleProject(this.props.projectId)
-    }
+    // componentDidMount() {
+    //     this.props.requestSingleProject(this.props.projectId)
+    // }
 
     update(field) {
         return (e) => this.setState({
@@ -34,7 +30,7 @@ class EditModal extends React.Component {
         const project = Object.assign({}, this.state);
 
         this.props.updateProject(project).then(() => {
-            this.props.history.push('/home');
+            this.props.history.push(`/projects/${this.state.id}`);
             this.setState({
                 name: '',
                 description: '',
@@ -47,13 +43,8 @@ class EditModal extends React.Component {
 
 
     render() {
-        // debugger
-        // console.log(this.state.project);
         if (!this.props.modal) return null;
-        // above working to some extent
-
         // if (!this.props.project) return null;
-        // console.log(this.props.project);
 
         return ( 
             <div className="modal-background" onClick={this.props.closeModal}>
@@ -100,8 +91,6 @@ class EditModal extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state.ui.modal)
-
     return {
         modal: state.ui.modal.modalType,
         // projectId: state.ui.modal.projectId,

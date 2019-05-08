@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { updateProject } from '../../actions/project_actions';
 import EditDropdown from './edit_project_dropdown';
 import { openModal, closeModal } from '../../actions/modal_actions';
 

@@ -24,7 +24,6 @@ class EditDropdown extends React.Component {
     }
 
     render() {
-        // debugger
         return (
             <div className="edit-dropdown">
                 <button className='edit-dropdown-button' onClick={this.showDropdown}>
@@ -32,9 +31,18 @@ class EditDropdown extends React.Component {
                 </button>
                 
                 {this.state.displayDropdown ? ( 
-                    <button className='dropdown-project' onClick={() => this.props.openModal('update', this.props.projectId)}>
-                        Edit ProjectxX
-                    </button>
+                    <ul className='dropdown-list'>
+                        <li>
+                            <button className='dropdown-project' onClick={() => this.props.openModal('update', this.props.projectId)}>
+                                Edit Project
+                            </button>
+                        </li>
+                        <li>
+                            <button className='dropdown-project' id='delete-project'>
+                                Delete Project
+                            </button>
+                        </li>
+                    </ul>
                 ) : (null)}
             </div>
         );

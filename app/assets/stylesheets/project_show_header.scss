@@ -82,16 +82,22 @@
 }
 
 .dropdown-project {
-    position: absolute;
+    position: relative;
     fill: white;
-    position: absolute;
     // top: 5.2%;
     // left: 89.5%;
     height: auto;
-    width: auto;
+    width: 100%;
     // background: none;
     padding: 10px;
     padding: 10px 20px 10px 20px;
+    background: white;
+    border-color: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: 1px solid #e0e6e8;
+    border-radius: 2%;
 }
 
 .dropdown-project:hover {
@@ -102,4 +108,17 @@
     outline: none;
     box-shadow: none;
     border-style: solid;
+    background-color: #edf1f2;
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: auto;
+    // border: 1px solid #e0e6e8;
+}
+
+.delete-project {
+    
 }
