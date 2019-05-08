@@ -15,7 +15,7 @@ const mDTP = dispatch => {
     return {
         openModal: (
             <button className='dropdown-project' onClick={() => dispatch(openModal('update'))}>
-                Edit Projectx
+                Edit ProjectxX
             </button>
         ),
         closeModal: () => dispatch(closeModal())

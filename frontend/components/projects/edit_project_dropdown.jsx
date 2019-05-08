@@ -32,9 +32,6 @@ class EditDropdown extends React.Component {
                 </button>
                 
                 {this.state.displayDropdown ? ( this.props.openModal
-                    // <button onClick={this.props.openModal} className='dropdown-project'>
-                    //     Edit Project
-                    // </button>
                 ) : (null)}
             </div>
         );
