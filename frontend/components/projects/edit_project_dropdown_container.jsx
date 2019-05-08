@@ -5,19 +5,9 @@ import { updateProject } from '../../actions/project_actions';
 import EditDropdown from './edit_project_dropdown';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mSTP = (state, ownProps) => {
-    return {
-
-    };
-};
-
 const mDTP = dispatch => {
     return {
-        openModal: (
-            <button className='dropdown-project' onClick={() => dispatch(openModal('update'))}>
-                Edit ProjectxX
-            </button>
-        ),
+        openModal: (modalType, projectId) => { dispatch(openModal(modalType, projectId)) },
         closeModal: () => dispatch(closeModal())
     };
 };

@@ -18,7 +18,7 @@ const ProjectShowHeader = (props) => {
                 <div id='project-header-sub-div'>
                     <div id='project-header-name-row'>
                         <div id='project-header-name'>{props.project.name}</div>
-                        <EditDropdownContainer />
+                        <EditDropdownContainer projectId={props.project.id} />
                     </div>
                     <div id='project-header-description'>{props.project.description}</div>
                 </div>

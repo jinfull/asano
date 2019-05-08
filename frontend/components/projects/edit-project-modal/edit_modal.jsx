@@ -8,20 +8,18 @@ import { requestSingleProject, updateProject } from '../../../actions/project_ac
 class EditModal extends React.Component {
     constructor(props) {
         super(props);
-        
-        // this.state = this.props.project;
-        // above is original
+        // this.state = {
+        //     project: null
+        // };
 
-        // this.state = this.props.requestSingleProject(this.props.match.params.id);
-        debugger
-        // how/why can i do this here instead of in componentDidMount
+        this.state = this.props.project;
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
         // debugger
-        this.props.requestSingleProject(this.props.match.params.id);
+        this.props.requestSingleProject(this.props.projectId)
     }
 
     update(field) {
@@ -49,12 +47,13 @@ class EditModal extends React.Component {
 
 
     render() {
-        debugger
+        // debugger
+        // console.log(this.state.project);
         if (!this.props.modal) return null;
         // above working to some extent
 
         // if (!this.props.project) return null;
-        console.log(this.props.project);
+        // console.log(this.props.project);
 
         return ( 
             <div className="modal-background" onClick={this.props.closeModal}>
@@ -101,11 +100,12 @@ class EditModal extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps)
+    console.log(state.ui.modal)
 
     return {
-        modal: state.ui.modal,
-        project: state.entities.projects[ownProps.match.params.id]
+        modal: state.ui.modal.modalType,
+        // projectId: state.ui.modal.projectId,
+        project: state.entities.projects[state.ui.modal.projectId],
     };
 };
 
