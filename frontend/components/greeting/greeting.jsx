@@ -6,7 +6,7 @@ const Greeting = ({ currentUser, logout }) => {
         <div className='header-group' id='login-signup-header'>
             <Link to='/login' id="login-greeting">Log In</Link>
             &nbsp;&nbsp;
-            <Link to='signup'><button id='try-free-greeting'>Try for free</button></Link>            
+            <Link to='/signup'><button id='try-free-greeting'>Try for free</button></Link>            
         </div>
     );
         
