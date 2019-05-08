@@ -33,12 +33,12 @@ class EditDropdown extends React.Component {
                 {this.state.displayDropdown ? ( 
                     <ul className='dropdown-list'>
                         <li>
-                            <button className='dropdown-project' onClick={() => this.props.openModal('update', this.props.projectId)}>
+                            <button className='dropdown-project' id='edit-project-button' onClick={() => this.props.openModal('update', this.props.projectId)}>
                                 Edit Project
                             </button>
                         </li>
                         <li>
-                            <button className='dropdown-project' id='delete-project'>
+                            <button className='dropdown-project' id='delete-project' onClick={() => this.props.openModal('delete', this.props.projectId)}>
                                 Delete Project
                             </button>
                         </li>

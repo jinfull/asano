@@ -73,17 +73,25 @@ nav.home-header-group {
 
 .logout-dropdown {
     position: absolute;
-    top: 5.2%;
-    left: 89.5%;
+    top: 8.2%;
+    left: 91.5%;
     height: auto;
     width: auto;
-    padding: 10px;
-    padding: 10px 20px 10px 20px;
     border-color: inherit;
+
+    background: white;
+    border-color: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: 1px solid #e0e6e8;
+    border-radius: 2%;
+
+    padding: 10px 15px;
 }
 
 .logout-dropdown:hover {
-    // background-color: rgba(255,255,255,0.08);
+    background: #e0e6e8; 
 }
 
 .logout-dropdown:active:focus, .logout-dropdown:focus {

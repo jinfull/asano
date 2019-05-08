@@ -59,7 +59,12 @@
   padding-top: 6px;
   padding-bottom: 6px;
   width: 97.5%;
+  
 }
+
+// .project-input::selection {
+//   background: #ACCEF7;
+// }
 
 .project-input-name {
   height: 30px;
@@ -121,8 +126,35 @@ textarea.project-input {
   border-color: #008ce3;
 }
 
-#abc {
-  background-color: black;
-  height: 100%;
-  width: 100%;
+.delete-modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1%;
+  background: white;
+  height: 150px;
+  max-height: 500px;
+  width: 400px;
+  padding: 20px;
+}
+
+.delete-modal-top {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#delete-button-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.delete-confirmation-msg {
+  padding-top: 12px;
+  padding-bottom: 15px;
+}
+
+#delete-project-button:hover {
+  background: rgb(203, 74, 74);
 }

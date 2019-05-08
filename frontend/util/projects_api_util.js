@@ -27,3 +27,10 @@ export const updateProject = project => {
         data: { project }
     });
 };
+
+export const deleteProject = projectId => {
+    return $.ajax({
+        method: 'delete',
+        url: `/api/projects/${projectId}`
+    });
+};
