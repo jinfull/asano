@@ -3,15 +3,25 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import { closeModal } from '../../../actions/modal_actions';
-import { updateProject } from '../../../actions/project_actions';
-
+import { requestSingleProject, updateProject } from '../../../actions/project_actions';
 
 class EditModal extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.project;
+        
+        // this.state = this.props.project;
+        // above is original
+
+        // this.state = this.props.requestSingleProject(this.props.match.params.id);
+        debugger
+        // how/why can i do this here instead of in componentDidMount
 
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        // debugger
+        this.props.requestSingleProject(this.props.match.params.id);
     }
 
     update(field) {
@@ -39,8 +49,13 @@ class EditModal extends React.Component {
 
 
     render() {
-        if (!this.props.modal) return null;
         debugger
+        if (!this.props.modal) return null;
+        // above working to some extent
+
+        // if (!this.props.project) return null;
+        console.log(this.props.project);
+
         return ( 
             <div className="modal-background" onClick={this.props.closeModal}>
                 <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -86,7 +101,8 @@ class EditModal extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+    console.log(ownProps)
+
     return {
         modal: state.ui.modal,
         project: state.entities.projects[ownProps.match.params.id]
@@ -96,6 +112,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         closeModal: () => dispatch(closeModal()),
+        requestSingleProject: projectId => dispatch(requestSingleProject(projectId)),
         updateProject: project => dispatch(updateProject(project))
     };
 };
