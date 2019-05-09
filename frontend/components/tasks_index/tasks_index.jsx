@@ -13,10 +13,13 @@ class TasksIndex extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.someFunction = this.someFunction.bind(this);
+        this.someFunction();
     }
 
-    componentDidMount() {
+    someFunction() {
         // this.props.fetchTasks();
+        this.setState({ state: this.state });
     }
 
     update(field) {
@@ -51,6 +54,8 @@ class TasksIndex extends React.Component {
                 </div>
             )
         })
+
+        // this.someFunction();
 
         return (
             <div className='tasks-index-container'>

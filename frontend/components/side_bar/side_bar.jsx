@@ -32,6 +32,11 @@ class SideBar extends React.Component {
                             <div className='marketing-team'>Marketing Team</div>
                             {this.props.openModal}
                         </div>
+                        <div className='circle-container'>
+                            <div className='circle-sidebar' id='circle-one'>JJ</div>
+                            <div className='circle-sidebar' id='circle-two'>AS</div>
+                            <div className='circle-sidebar' id='circle-three'>GH</div>
+                        </div>
                         <ul className='side-bar-projects'>
                             {projects}
                         </ul>

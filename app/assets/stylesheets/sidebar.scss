@@ -70,6 +70,7 @@
     align-content: center;
     justify-content: center;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .sidebar-link {
@@ -135,6 +136,34 @@
     border-radius: 25%;
 }
 
-#sidebar-project-name {
+.circle-sidebar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: red;
+    margin-right: 8px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+}
 
+.circle-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 19px;
+}
+
+#circle-one {
+    background: rgb(70, 171, 139);
+}
+#circle-two {
+    background: rgb(176, 114, 208);
+}
+#circle-three {
+    background: rgb(8, 154, 146);
 }
