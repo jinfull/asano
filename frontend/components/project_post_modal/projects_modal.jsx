@@ -35,7 +35,6 @@ class ProjectsPostModal extends React.Component {
             this.setState({
                 name: '',
                 description: '',
-                owner_id: '1',
                 team_id: '1'
             });
             this.props.closeModal();

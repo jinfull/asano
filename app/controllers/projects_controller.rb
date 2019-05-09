@@ -1,11 +1,15 @@
 class Api::ProjectsController < ApplicationController    
     def create
-        @project = Project.create!(project_params)
+        # @project = Project.new(project_params)
+        # @project.owner_id = current_user.id
+        @project = current_user.projects.build(project_params)
+        @project.save
+
         render :show
     end
 
     def index
-        @projects = Project.all
+        @projects = current_user.projects
     end
 
     def show
@@ -37,6 +41,6 @@ class Api::ProjectsController < ApplicationController
     private
 
     def project_params
-        params.require(:project).permit(:name, :description, :team_id, :owner_id)
+        params.require(:project).permit(:name, :description, :team_id)
     end
 end

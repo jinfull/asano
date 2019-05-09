@@ -21,8 +21,12 @@ class Dropdown extends React.Component {
         this.setState({ displayDropdown: false }, () => {
             document.removeEventListener('click', this.hideDropdown);
         });
-
     }
+
+    // myLogout() {
+    //     this.props.logout()
+    //         .then()
+    // }
 
     render() {
         const currentInitials = this.props.currentUser.first_name[0] + this.props.currentUser.last_name[0];

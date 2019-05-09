@@ -7,15 +7,13 @@ class TasksIndex extends React.Component {
 
         console.log(props);
     }
-
-    
     
     render() {
         return (
             <div>
                 <div className='tasks-index-header'>
                     <form>
-                        <button></button>
+                        <button>This is my button yepee</button>
 
                     </form>
                 </div>

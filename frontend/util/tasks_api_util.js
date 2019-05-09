@@ -12,10 +12,10 @@ export const fetchTask = (taskId) => {
     });
 };
 
-export const createTask = (task) => {
+export const createTask = (projectId, task) => {
     return $.ajax({
         method: 'post',
-        url: '/api/projects/:project_id/tasks',
+        url: `/api/projects/${projectId}/tasks`,
         data: { task }
     });
 };
