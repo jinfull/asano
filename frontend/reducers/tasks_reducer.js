@@ -22,7 +22,6 @@ const tasksReducer = (state = {}, action) => {
             return newState;
         case RECEIVE_SINGLE_PROJECT:
             return merge({}, state, action.payload.tasks);
-        // case CLEAR_TASKS:
         default:
             return state;
     }

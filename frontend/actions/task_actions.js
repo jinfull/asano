@@ -20,10 +20,6 @@ const removeTask = taskId => ({
     taskId
 });
 
-export const clearTasks = () => ({
-    type: CLEAR_TASK
-});
-
 export const fetchTasks = (projectId) => dispatch => {
     return TasksApiUtil.fetchTasks(projectId)
         .then(tasks => dispatch(receiveTasks(tasks)));
