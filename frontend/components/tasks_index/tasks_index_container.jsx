@@ -7,10 +7,9 @@ import { selectTasksByProjectId } from '../../helpers/selectors';
 import { createTask } from '../../actions/task_actions';
 
 const mSTP = (state, ownProps) => {
-    console.log(state);
-    console.log(ownProps);
     return {
         tasks: selectTasksByProjectId(state, ownProps.match.params.projectId),
+        projectId: ownProps.match.params.projectId
     };
 };
 

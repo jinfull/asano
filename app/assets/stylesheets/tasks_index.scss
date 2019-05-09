@@ -2,12 +2,99 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    flex-direction: column;
+    // align-content: flex-start;
+    // justify-items: flex-start;
+}
+
+.tasks-index-header {
+    border-bottom: 2px solid #edf1f2;
 }
 
 .new-task-form {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-top: 30px;
+    justify-content: center;
+    // padding-top: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    // height: 100%;
+}
+
+.new-task-input {
+  border: 1px solid #d5dce0;
+  border-radius: 2.5px;
+  width: 55%;
+//   margin: 2% 0% 2% 0%;
+  padding: 6px 10px;
+  margin-right: 25px;
+//   width: 97.5%;
+}
+
+.new-task-button {
+    // height: 100%;
+  border: 1px solid #b7bfc6;
+  color: white;
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: #14aaf5;
+  border: none;
+}
+
+.new-task-button:hover {
+  background: #008ce3;
+  border-color: #008ce3;
+
+}
+
+.new-task-input:hover {
+  border-color: #9ca6af;
+  box-shadow: inset 0 1px #e0e6e8;
+  outline: none;  
+  -webkit-box-shadow: 0px 0px 5px  #d5dce0;
+
+}
+
+.task-index-ul {
+    // margin-top: 10px;
+    margin-bottom: 10px;
+    // margin-left: 15px;
+}
+
+.task-li-item {
+    // margin-top: 15px;
+    font-size: 13px;
+    padding: 7.25px;
+    // margin: 8px;
+    margin-left: 18px;
+    margin-right: 18px;
+    // margin-left: 5px;
+    border-bottom: 1px solid #f0f2f2;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+// .task-li-item:hover {
+//     background: #dde1e2;
+// }
+
+.div-li-container:hover {
+    background: #f0f2f2;
+    //   background-color: transparent;
+  color: #151b26;
+  // height: 29.5px;
+//   padding: 0px;
+//   resize: none;
+//   display: flex;
+//   align-items: center;
+//   line-height: 15px;
+//   border: none;
+//   width: 100%;
+  outline: none;
+//   font-family: sans-serif;
+//   cursor: pointer;
+    // border-top:1px solid #f0f2f2;
+    // position: absolute;
 }
