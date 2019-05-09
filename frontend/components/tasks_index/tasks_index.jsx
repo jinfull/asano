@@ -1,5 +1,7 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
+import TaskShowContainer from '../task_show/task_show_container';
 
 class TasksIndex extends React.Component {
     constructor(props) {
