@@ -8,7 +8,7 @@ class Api::TasksController < ApplicationController
     end
 
     # def index
-    #     @tasks = Task.all.select { |t| t.project_id == params[:project_id] }
+    #     @tasks = Task.all.select { |t| t.project_id == params[:project_id].to_i }
     # end
 
     def show

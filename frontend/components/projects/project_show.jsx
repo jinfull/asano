@@ -8,6 +8,12 @@ class ProjectShow extends React.Component {
         this.props.requestSingleProject(this.props.match.params.projectId);
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.projectId !== prevProps.match.params.projectId) {
+            this.props.requestSingleProject(this.props.match.params.projectId);
+        }
+    }
+
     render() {
         const project = this.props.project;
 

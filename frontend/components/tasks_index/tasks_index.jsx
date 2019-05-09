@@ -13,14 +13,19 @@ class TasksIndex extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.someFunction = this.someFunction.bind(this);
-        this.someFunction();
     }
 
-    someFunction() {
-        // this.props.fetchTasks();
-        this.setState({ state: this.state });
-    }
+    // componentDidMount() {
+    //     this.props.fetchTasks(this.props.projectId);
+    // }
+
+    // componentDidUpdate(prevProps) {
+    //     // let id = this.props.match.params.projectId;
+    //     // debugger
+    //     if (prevProps.projectId !== this.props.projectId) {
+    //         this.props.fetchTasks(this.props.projectId);
+    //     }
+    // }
 
     update(field) {
         return(e) => this.setState({
@@ -30,7 +35,6 @@ class TasksIndex extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // if (!unusedTasks) return;
         const task = Object.assign({}, this.state);
         // debugger
 
@@ -47,15 +51,28 @@ class TasksIndex extends React.Component {
     }
     
     render() {
-        const tasks = this.props.tasks.map(task => {
+
+        // const fetchedTasks = this.props.fetchedTasks.map(task => {
+        //     return(
+        //         <div key={task.id} className='div-li-container'>
+        //             <li key={task.id} className='task-li-item'>
+        //                 {task.name}
+        //             </li>
+        //         </div>
+        //     )
+        // })
+
+        // let tasks = this.props.tasks;
+
+        // if (!tasks) return null;
+
+        let tasks = this.props.tasks.map(task => {
             return (
                 <div key={task.id} className='div-li-container'>
                     <li key={task.id} className='task-li-item'>{task.name}</li>
                 </div>
             )
         })
-
-        // this.someFunction();
 
         return (
             <div className='tasks-index-container'>

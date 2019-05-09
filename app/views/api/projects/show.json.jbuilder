@@ -11,4 +11,3 @@ json.set! 'tasks' do
         end
     end
 end
-

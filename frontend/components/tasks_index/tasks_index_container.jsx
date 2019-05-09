@@ -7,9 +7,7 @@ import { selectTasksByProjectId } from '../../helpers/selectors';
 import { createTask, fetchTasks } from '../../actions/task_actions';
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
-        // unusedTasks: Object.keys(state.entities.tasks).map(id => state.entities.tasks[id]),
         tasks: selectTasksByProjectId(state, ownProps.match.params.projectId),
         projectId: ownProps.match.params.projectId
     };
@@ -17,7 +15,6 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        // fetchTasks: () => dispatch(fetchTasks()),
         createTask: (projectId, task) => dispatch(createTask(projectId, task))
     };
 };

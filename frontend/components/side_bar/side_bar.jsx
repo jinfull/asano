@@ -40,11 +40,7 @@ class SideBar extends React.Component {
                         <ul className='side-bar-projects'>
                             {projects}
                         </ul>
-                    </div>
-                
-                
-                
-                
+                    </div>                
                 </div>
             </div>
         )

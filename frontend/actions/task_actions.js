@@ -3,6 +3,7 @@ import * as TasksApiUtil from '../util/tasks_api_util';
 export const RECEIVE_TASKS = 'RECEIVE_TASKS';
 export const RECEIVE_SINGLE_TASK = 'RECEIVE_SINGLE_TASK';
 export const REMOVE_TASK = 'DELETE_TASK';
+export const CLEAR_TASK = 'CLEAR_TASK';
 
 const receiveTasks = tasks => ({
     type: RECEIVE_TASKS,
@@ -19,8 +20,12 @@ const removeTask = taskId => ({
     taskId
 });
 
-export const fetchTasks = () => dispatch => {
-    return TasksApiUtil.fetchTasks()
+export const clearTasks = () => ({
+    type: CLEAR_TASK
+});
+
+export const fetchTasks = (projectId) => dispatch => {
+    return TasksApiUtil.fetchTasks(projectId)
         .then(tasks => dispatch(receiveTasks(tasks)));
 };
 
