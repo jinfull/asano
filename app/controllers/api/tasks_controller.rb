@@ -7,9 +7,9 @@ class Api::TasksController < ApplicationController
         render :show
     end
 
-    def index
-        @tasks = Task.all
-    end
+    # def index
+    #     @tasks = Task.all.select { |t| t.project_id == params[:project_id] }
+    # end
 
     def show
         @task = Task.find(params[:id])

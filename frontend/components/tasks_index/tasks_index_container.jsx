@@ -2,16 +2,21 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import TasksIndex from './tasks_index';
+import { selectTasksByProjectId } from '../../helpers/selectors';
 
-// import {} from '../../actions/'
+import { createTask } from '../../actions/task_actions';
 
 const mSTP = (state, ownProps) => {
-    return {};
+    console.log(state);
+    console.log(ownProps);
+    return {
+        tasks: selectTasksByProjectId(state, ownProps.match.params.projectId),
+    };
 };
 
 const mDTP = dispatch => {
     return {
-
+        createTask: (projectId, task) => dispatch(createTask(projectId, task))
     };
 };
 

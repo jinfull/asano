@@ -18,8 +18,6 @@ class SideBar extends React.Component {
             );
         });
 
-        console.log(projects);
-
         return (
             <div className='side-bar-wrapper'>
                 <div className='side-bar-container'>

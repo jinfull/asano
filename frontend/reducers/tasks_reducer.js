@@ -4,6 +4,9 @@ import {
     RECEIVE_SINGLE_TASK,
     REMOVE_TASK
 } from '../actions/task_actions';
+import {
+    RECEIVE_SINGLE_PROJECT
+} from '../actions/project_actions';
 
 const tasksReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -17,6 +20,8 @@ const tasksReducer = (state = {}, action) => {
             let newState = merge({}, state);
             delete newState[action.taskId];
             return newState;
+        case RECEIVE_SINGLE_PROJECT:
+            return merge({}, state, action.payload.tasks);
         default:
             return state;
     }
