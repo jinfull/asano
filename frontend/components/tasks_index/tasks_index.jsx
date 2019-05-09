@@ -15,6 +15,10 @@ class TasksIndex extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        // this.props.fetchTasks();
+    }
+
     update(field) {
         return(e) => this.setState({
             [field]: e.currentTarget.value
@@ -23,7 +27,7 @@ class TasksIndex extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        
+        // if (!unusedTasks) return;
         const task = Object.assign({}, this.state);
         // debugger
 
