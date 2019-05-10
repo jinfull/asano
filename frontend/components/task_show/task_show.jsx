@@ -19,7 +19,25 @@ class TaskShow extends React.Component {
 
         return (
             <div className='task-show-top'>
-                <div>{task.name}</div>
+                <div id='task-show-name'>{task.name}</div>
+                <div className='task-show-row-one'>
+                    <div className='task-show-grouping'>
+                        <div className='task-show-circle' id='task-show-circle-initials'>JJ</div>
+                        <div className='task-show-col'>
+                            <div className='task-show-label'>Assigned To</div>
+                            <div id='task-show-assignee'>{task.assignee_id}</div>
+                        </div>
+                    </div>
+                    <div className='task-show-grouping'>
+                        <div className='task-show-circle' id='calendar-icon'></div>
+                        <div className='task-show-col'>
+                            <div className='task-show-label'>Due Date</div>
+                            <div id='task-show-due-date'>{task.due_date}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id='tash-show-description'>{task.description}</div>
             </div>
         )
     }

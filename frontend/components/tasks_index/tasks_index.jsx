@@ -40,8 +40,8 @@ class TasksIndex extends React.Component {
         const task = Object.assign({}, this.state);
         // debugger
 
-        this.props.createTask(this.props.projectId, task).then(() => {
-            this.props.history.push(`/projects/${this.props.projectId}`);
+        let newTask = this.props.createTask(this.props.projectId, task).then(() => {
+            this.props.history.push(`/projects/${this.props.projectId}/tasks/${task.id}`);
             this.setState({
                 name: '',
                 completed: 'true',

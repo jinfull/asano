@@ -1,0 +1,81 @@
+// .task-show-top {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// #task-show-name {
+//     font-size: 36px;
+// }
+
+
+.task-show-top {
+    margin-top: 11.5px;
+    height: 92.5%;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    background-color: white;
+    padding: 22px;
+    width: 80%;
+}
+
+#task-show-name {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 32px;
+    cursor: pointer;
+
+}
+
+.task-show-row-one {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+}
+
+.task-show-col {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.25px;
+}
+
+.task-show-label {
+    color: #848f99;
+    font-size: 12px;
+    margin-right: 50px;
+    margin-bottom: 3px;
+}
+
+
+.task-show-grouping {
+    display: flex;
+    flex-direction: row;
+        cursor: pointer;
+
+}
+
+.task-show-circle {
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    margin-right: 10px;
+    border: 0.2px solid rgb(197, 197, 197);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+}
+
+#task-show-circle-initials {
+    background-color: #deac70;
+}
+
+#calendar-icon {
+    background-image: image-url('calendar.png');
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0;
+    
+}

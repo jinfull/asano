@@ -19,4 +19,6 @@ project3 = Project.create!(owner_id: user1.id, team_id: 1, name: 'Develop Market
 project4 = Project.create!(owner_id: user1.id, team_id: 1, name: 'Improve Session Errors Styling', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', completed: true)
 project5 = Project.create!(owner_id: user1.id, team_id: 1, name: 'Marketing refresh of Splash Page', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', completed: true)
 
-task1 = Task.create!(creator_id: user1.id, project_id: project1.id, name: 'EMEA Region Revenue Surveys', completed: true, description: 'This is my description for this and this')
+task1 = Task.create!(creator_id: user1.id, project_id: project1.id, name: 'EMEA Region Revenue Surveys', completed: true, description: 'This is my description for this and this', assignee_id: 1, due_date: DateTime.new(2019,9,9))
+task1 = Task.create!(creator_id: user1.id, project_id: project3.id, name: 'Another task that I have for this project', completed: true, description: 'My very descriptive description for this specific task.', assignee_id: 1, due_date: DateTime.new(2019,9,9))
+task1 = Task.create!(creator_id: user1.id, project_id: project3.id, name: 'Do X before Y', completed: true, description: 'Lorem Ipsum and so forth.', assignee_id: 1, due_date: DateTime.new(2019,9,9))
