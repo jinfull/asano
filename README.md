@@ -59,7 +59,42 @@ Once there are no more characters remaining in both the demoEmail and demoPass, 
 
 Partials and conditional rendering are both used throughout my code in order to keep code as DRY as possible. Whenever possible, similar components were combined into singular, reusable components to avoid having the same repeated code in different places.
 
+```
+        let nameInputs = null;
+        let demoLoginButton = null;
 
+        if (this.props.formType === 'sign up') {
+            nameInputs = 
+                <div className="name-inputs-label">
+                    <label className="session-label">First Name
+                        <input
+                            type='text'
+                            value={this.state.first_name}
+                            onChange={this.update('first_name')}
+                            className="session-input"
+                            id="session-input"
+                        />
+                    </label>
+
+                    <label className="session-label">Last Name
+                        <input
+                            type='text'
+                            value={this.state.last_name}
+                            onChange={this.update('last_name')}
+                            className="session-input"
+                            id="session-input"
+                        />
+                    </label>
+                </div>
+        } else {
+            demoLoginButton = 
+                <button className='session-submit' id='demo-login' onClick={(e) => this.handleDemoSubmit(e)}>
+                    demo login
+                </button>
+        }
+```
+
+Above, we assign two components based on our props without the need to repeat code. We then render both and depending on the session form type, only one of these components will be rendered.
 
 
 ## Technologies
