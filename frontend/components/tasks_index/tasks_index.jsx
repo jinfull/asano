@@ -23,7 +23,6 @@ class TasksIndex extends React.Component {
 
     // componentDidUpdate(prevProps) {
     //     // let id = this.props.match.params.projectId;
-    //     // debugger
     //     if (prevProps.projectId !== this.props.projectId) {
     //         this.props.fetchTasks(this.props.projectId);
     //     }
@@ -38,7 +37,6 @@ class TasksIndex extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const task = Object.assign({}, this.state);
-        // debugger
 
         let newTask = this.props.createTask(this.props.projectId, task).then(() => {
             this.props.history.push(`/projects/${this.props.projectId}/tasks/${task.id}`);
@@ -69,7 +67,6 @@ class TasksIndex extends React.Component {
         // if (!tasks) return null;
 
         let tasks = this.props.tasks.map(task => {
-            // debugger
             return (
                 <div key={task.id} className='div-li-container'>
                     <Link to={`/projects/${task.project_id}/tasks/${task.id}`} className='link-to-task-show'>

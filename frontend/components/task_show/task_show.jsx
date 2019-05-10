@@ -7,12 +7,10 @@ class TaskShow extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchTask(this.props.match.params.taskId);
     }
     
     render() {
-        // debugger
         const task = this.props.task;
 
         if (!task) return null;

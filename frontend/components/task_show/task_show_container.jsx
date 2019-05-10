@@ -6,7 +6,6 @@ import { fetchTask, updateTask } from '../../actions/task_actions';
 
 const mSTP = (state, ownProps) => {
     const task = state.entities.tasks[ownProps.match.params.taskId];
-    // debugger
     return {
         task
     };

@@ -10,7 +10,6 @@ class ProjectShowBody extends React.Component {
     }
 
     render() {
-        // debugger
         return (
             <div className='project-body-top'>
                 <div className='project-body-container'>

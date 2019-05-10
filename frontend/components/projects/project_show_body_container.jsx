@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 import ProjectShowBody from './project_show_body';
 
 const mSTP = (state, ownProps) => {
-    // debugger
-    // const task = state.entities.tasks[ownProps.match.params.taskId];
+\    // const task = state.entities.tasks[ownProps.match.params.taskId];
 
     return {
 
