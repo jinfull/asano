@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import TaskShow from './task_show';
+import { fetchTask, updateTask } from '../../actions/task_actions';
 
 const mSTP = (state, ownProps) => {
     const task = state.entities.tasks[ownProps.match.params.taskId];
-    
+    // debugger
     return {
         task
     };

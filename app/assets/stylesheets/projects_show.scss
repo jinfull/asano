@@ -7,15 +7,28 @@
     justify-content: center;
     background-size: cover;
     background-color: #F6F8F9;
+    // flex-direction: row;
 }
 .project-body-container {
-    margin-top: 11.5px;
-    height: 98.5%;
-    width: 70%;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-    background-color: white;
+    // margin-top: 11.5px;
+    // height: 98.5%;
+    // width: 70%;
+    // box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    // background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center; 
     align-items: center;
+    width: 90%;
+}
+
+.task-show-top {
+            margin-top: 11.5px;
+    height: 92.5%;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    background-color: white;
+    padding: 22px;
+    width: 80%;
+    // margin-right: 20px;
+
 }

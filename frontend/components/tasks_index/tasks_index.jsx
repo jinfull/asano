@@ -69,9 +69,12 @@ class TasksIndex extends React.Component {
         // if (!tasks) return null;
 
         let tasks = this.props.tasks.map(task => {
+            // debugger
             return (
                 <div key={task.id} className='div-li-container'>
-                    <li key={task.id} className='task-li-item'>{task.name}</li>
+                    <Link to={`/projects/${task.project_id}/tasks/${task.id}`} className='link-to-task-show'>
+                        <li key={task.id} className='task-li-item'>{task.name}</li>
+                    </Link>
                 </div>
             )
         })
@@ -79,6 +82,8 @@ class TasksIndex extends React.Component {
         return (
             <div className='tasks-index-container'>
                 <div className='tasks-index-header'>
+                    {/* <TaskShowContainer /> */}
+
                     <form className='new-task-form' onSubmit={this.handleSubmit}>
                         <input
                             className='new-task-input'

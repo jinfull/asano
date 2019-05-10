@@ -6,6 +6,13 @@
     flex-direction: column;
     // align-content: flex-start;
     // justify-items: flex-start;
+        margin-top: 11.5px;
+    height: 92.5%;
+    width: 80%;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    background-color: white;
+    padding: 22px;
+    margin-right: 20px;
 }
 
 .tasks-index-header {
@@ -74,6 +81,13 @@
     // margin-left: 5px;
     border-bottom: 1px solid #f0f2f2;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.link-to-task-show {
+  text-decoration: none;
 }
 
 // .task-li-item:hover {

@@ -11,6 +11,7 @@ import SideBar from '../side_bar/side_bar_container';
 import HeaderContainer from '../header/header_container';
 import ProjectShowContainer from '../projects/project_show_container';
 import Modal from '../modal';
+import TaskShowContainer from '../task_show/task_show_container';
 
 import {AuthRoute, ProtectedRoute} from '../../util/route_util';
 
@@ -26,10 +27,10 @@ const selectRoutes = loggedIn => {
             <>
                 <Modal />
                 <SideBar />
-                <Switch>
-                    <Route path='/projects/:projectId' component={ProjectShowContainer} />
-                    <Route path='/home' component={HomeContainer} />
-                </Switch>
+                <Route path='/projects/:projectId' component={ProjectShowContainer} />
+                <Route path='/home' component={HomeContainer} />
+                {/* <Switch>
+                </Switch> */}
             </>
         )
     } else {
