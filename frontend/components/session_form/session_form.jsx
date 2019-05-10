@@ -75,7 +75,7 @@ class SessionForm extends React.Component {
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li className='errors-list-item' key={`error-${i}`}>
                         {error}
                     </li>
                 ))}

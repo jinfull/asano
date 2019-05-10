@@ -37,7 +37,7 @@ class TaskShow extends React.Component {
                     </div>
                 </div>
 
-                <div id='tash-show-description'>{task.description}</div>
+                <div id='task-show-description'>{task.description}</div>
             </div>
         )
     }
