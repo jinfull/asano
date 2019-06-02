@@ -38,16 +38,22 @@ class TasksIndex extends React.Component {
         e.preventDefault();
         const task = Object.assign({}, this.state);
 
+
         let newTask = this.props.createTask(this.props.projectId, task).then(() => {
-            this.props.history.push(`/projects/${this.props.projectId}/tasks/${task.id}`);
-            this.setState({
-                name: '',
-                completed: 'true',
-                description: '',
-                assignee_id: '',
-                due_date: ''
+                // debugger
+                // this.props.history.push(`/projects/${this.props.projectId}/tasks/${task.id}`);
+                this.setState({
+                    name: '',
+                    completed: 'true',
+                    description: '',
+                    assignee_id: '',
+                    due_date: ''
+                });
             });
-        });
+
+        // console.log(task);
+        // console.log(this.props.tasks);
+        // console.log(newTask);
     }
     
     render() {

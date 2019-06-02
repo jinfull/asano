@@ -15,7 +15,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        createTask: (projectId, task) => dispatch(createTask(projectId, task))
+        createTask: (projectId, task) => dispatch(createTask(projectId, task)),
+        fetchTasks: (projectId) => dispatch(fetchTasks(projectId))
     };
 };
 
