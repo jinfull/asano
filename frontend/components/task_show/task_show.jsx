@@ -15,11 +15,13 @@ class TaskShow extends React.Component {
 
         if (!task) return null;
 
+        // console.log(task.id);
+
         return (
             <div className='task-show-top'>
                 <div id="task-show-header">
                     <div id='task-show-name'>{task.name}</div>
-                    <div id='delete-task'></div>
+                    <div id='delete-task' onClick={() => this.props.deleteTask(task.id)}></div>
                 </div>
                 <div className='task-show-row-one'>
                     <div className='task-show-grouping'>

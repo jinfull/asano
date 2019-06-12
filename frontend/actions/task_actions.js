@@ -41,6 +41,6 @@ export const updateTask = (task) => dispatch => {
 };
 
 export const deleteTask = (taskId) => dispatch => {
-    return TasksApiUtil.deleteTask(task)
+    return TasksApiUtil.deleteTask(taskId)
         .then(task => dispatch(removeTask(task)));
 };

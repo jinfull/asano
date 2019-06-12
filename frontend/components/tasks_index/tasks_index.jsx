@@ -50,10 +50,6 @@ class TasksIndex extends React.Component {
                     due_date: ''
                 });
             });
-
-        // console.log(task);
-        // console.log(this.props.tasks);
-        // console.log(newTask);
     }
     
     render() {

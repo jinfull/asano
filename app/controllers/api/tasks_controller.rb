@@ -15,6 +15,17 @@ class Api::TasksController < ApplicationController
         @task = Task.find(params[:id])
     end
 
+    def destroy
+        @task = Task.find(params[:id])
+        task_id = @task.id
+
+        if @task.destroy
+            render json: task_id
+        else
+            render json: @task.errors.full_messages, status: 422
+        end
+    end
+
     private
 
     

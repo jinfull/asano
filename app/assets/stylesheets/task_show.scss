@@ -30,7 +30,7 @@
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
     display: flex;
     flex-direction: row;
-    margin: 20px 0px;
+    margin: 35px 0px;
 }
 
 .task-show-col {
@@ -50,7 +50,7 @@
 .task-show-grouping {
     display: flex;
     flex-direction: row;
-        cursor: pointer;
+    cursor: pointer;
 
 }
 
@@ -83,6 +83,7 @@
 #task-show-description {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
     cursor: pointer;
+    line-height: 150%;
 }
 
 
@@ -96,4 +97,6 @@
     width: 24px;
     background-image: image-url('delete.png');
     margin-top: 5px;
+    cursor: pointer;
+
 }
