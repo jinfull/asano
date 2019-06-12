@@ -5,7 +5,7 @@ import DropdownContainer from '../logout_dropdown/logout_dropdown_container';
 import EditDropdownContainer from '../projects/edit_project_dropdown_container';
 
 const ProjectShowHeader = (props) => {
-    let colorsArr = ['e362e3', 'ea4e9d', 'e8384f', 'e362e3', '7a6ff0', 'aa62e3', 'cdf22b', 'ffe572'];
+    let colorsArr = ['ffe572'];
 
     function sample(array) {
         return array[Math.floor(Math.random() * array.length)];

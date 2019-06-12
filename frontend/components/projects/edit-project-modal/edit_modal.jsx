@@ -91,10 +91,11 @@ class EditModal extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+    // console.log(state.entities.projects[state.ui.modal.objectId]);
     return {
         modal: state.ui.modal.modalType,
         // projectId: state.ui.modal.projectId,
-        project: state.entities.projects[state.ui.modal.projectId],
+        project: state.entities.projects[state.ui.modal.objectId],
     };
 };
 

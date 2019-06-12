@@ -2,7 +2,7 @@ import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions';
 
 const initState = {
     modalType: null,
-    projectId: null,
+    objectId: null,
 }
 
 export default function modalReducer(state = initState, action) {
@@ -11,13 +11,13 @@ export default function modalReducer(state = initState, action) {
             return {
                 ...state,
                 modalType: action.modalType,
-                projectId: action.projectId
+                objectId: action.objectId
             }
         case CLOSE_MODAL:
             return {
                 ...state,
                 modalType: null,
-                projectId: null
+                objectId: null
             };
         default:
             return state;

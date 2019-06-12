@@ -4,7 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import ProjectShowContainer from '../projects/project_show_container';
 
 const ProjectIndexTileItem = ({ project }) => {
-    let colorsArr = ['e362e3', 'ea4e9d', 'e8384f', 'e362e3', '7a6ff0', 'aa62e3', 'cdf22b', 'ffe572'];
+    let colorsArr = ['aa62e3', 'cdf22b', 'ffe572'];
 
     function sample(array) {
         return array[Math.floor(Math.random() * array.length)];

@@ -40,12 +40,52 @@ class EditTaskModal extends React.Component {
   render() {
     if (!this.props.modal) return null;
 
+    console.log(this.state);
+
     return (
       <div className="modal-background" onClick={this.props.closeModal}>
-        <div className="modal-child" onClick={e => e.stopPropagation()}>
+        <div className="modal-child" id="edit-task-modal" onClick={e => e.stopPropagation()}>
           <div className='modal-top-level'>
             <h1 className='create-project'>Edit Task</h1>
             <form className='project-form-container' onSubmit={this.handleSubmit}>
+
+              <div className='project-name-div'>
+                <label className='project-form-label' id='project-submit-name'>Name</label>
+                <br />
+                <input
+                  className='project-input'
+                  id='project-input-name'
+                  type='text'
+                  value={this.state.name}
+                  onChange={this.update('name')}
+                />
+                <br />
+              </div>
+
+              <div className='project-name-div'>
+                <label className='project-form-label' id='project-submit-name'>Name</label>
+                <br />
+                <input
+                  className='project-input'
+                  id='project-input-name'
+                  type='date'
+                  value={this.state.due_date}
+                  onChange={this.update('due_date')}
+                />
+                <br />
+              </div>
+
+              <div className='project-description-div'>
+                <label className='project-form-label' id='project-submit-description'>Description</label>
+                <br />
+                <textarea
+                  className='project-input'
+                  value={this.state.description}
+                  onChange={this.update('description')}
+                />
+                <br />
+              </div>
+
 
 
               <div className='button-row'>
@@ -62,10 +102,9 @@ class EditTaskModal extends React.Component {
 }
 
 const mSTP = (state, ownProps) => {
-  console.log(state);
   return {
     modal: state.ui.modal.modalType,
-    task: state.entities.projects[state.ui.modal.taskId]
+    task: state.entities.tasks[state.ui.modal.objectId]
   };
 };
 
