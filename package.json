@@ -8,6 +8,7 @@
     "babel-loader": "^8.0.5",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
+    "react-datepicker": "^2.7.0",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
@@ -45,7 +46,9 @@
     "npm": "6.4.1"
   },
   "devDependencies": {
+    "css-loader": "^3.0.0",
     "file-loader": "^3.0.1",
+    "style-loader": "^0.23.1",
     "url-loader": "^1.1.2"
   }
 }

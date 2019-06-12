@@ -109,24 +109,3 @@
 #assigned-to {
     margin-right: 25px;
 }
-
-#edit-delete-task {
-    display: flex;
-    flex-direction: row;
-}
-
-#edit-task {
-    background-image: image-url('edit.png');
-    margin-top: 5px;
-    cursor: pointer;
-    height: 24px;
-    width: 24px;
-
-    margin-right: 13.5px;
-}
-
-#edit-task-modal {
-    height: 450px;
-    max-height: 500px;
-    width: 500px;
-}

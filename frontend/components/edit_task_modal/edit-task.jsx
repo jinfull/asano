@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import DatePicker from 'react-datepicker';
 
 import { closeModal } from '../../actions/modal_actions';
 
@@ -63,12 +64,12 @@ class EditTaskModal extends React.Component {
               </div>
 
               <div className='project-name-div'>
-                <label className='project-form-label' id='project-submit-name'>Name</label>
+                <label className='project-form-label' id='project-submit-name'>Due Date</label>
                 <br />
-                <input
+                <DatePicker
+                  type='date'
                   className='project-input'
                   id='project-input-name'
-                  type='date'
                   value={this.state.due_date}
                   onChange={this.update('due_date')}
                 />
