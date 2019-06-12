@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :projects, only: [:create, :index, :show, :update, :destroy] do
       resources :tasks, only: [:create, :index, :show]
     end
-    resources :tasks, only: [:show, :destroy]
+    resources :tasks, only: [:show, :destroy, :update]
   end
 
   root "static_pages#root"

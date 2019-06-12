@@ -22,7 +22,7 @@ class TaskShow extends React.Component {
                 <div id="task-show-header">
                     <div id='task-show-name'>{task.name}</div>
                     <div id='edit-delete-task'>
-                        <div id='edit-task'></div>
+                        <div id='edit-task' onClick={() => this.props.openModal('update-task', task.id)}></div>
                         <div id='delete-task' onClick={() => this.props.deleteTask(task.id)}></div>
                     </div>
                 </div>

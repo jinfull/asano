@@ -5,6 +5,7 @@ import { closeModal } from '../actions/modal_actions';
 import ProjectsPostModal from './project_post_modal/projects_modal';
 import EditModal from './projects/edit-project-modal/edit_modal';
 import DeleteProjectModalContainer from './projects/edit-project-modal/delete_modal_container';
+import EditTaskModal from './edit_task_modal/edit-task';
 
 function Modal({ modal, closeModal }) {
 
