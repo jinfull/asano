@@ -21,10 +21,13 @@ class TaskShow extends React.Component {
             <div className='task-show-top'>
                 <div id="task-show-header">
                     <div id='task-show-name'>{task.name}</div>
-                    <div id='delete-task' onClick={() => this.props.deleteTask(task.id)}></div>
+                    <div id='edit-delete-task'>
+                        <div id='edit-task'></div>
+                        <div id='delete-task' onClick={() => this.props.deleteTask(task.id)}></div>
+                    </div>
                 </div>
                 <div className='task-show-row-one'>
-                    <div className='task-show-grouping'>
+                    <div className='task-show-grouping' id="assigned-to">
                         <div className='task-show-circle' id='task-show-circle-initials'>JJ</div>
                         <div className='task-show-col'>
                             <div className='task-show-label'>Assigned To</div>

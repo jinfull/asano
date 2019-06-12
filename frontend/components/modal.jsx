@@ -24,6 +24,9 @@ function Modal({ modal, closeModal }) {
         case 'delete':
             component = <DeleteProjectModalContainer />;
             break;
+        case 'update-task':
+            component = <EditTaskModal />;
+            break;
         default:
             return null;
     }
