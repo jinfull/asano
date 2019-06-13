@@ -12,8 +12,18 @@ class TaskShow extends React.Component {
     
     render() {
         const task = this.props.task;
+        let initials;
 
         if (!task) return null;
+
+
+        if (task.assignee.split(" ").length === 0) {
+            initials = "";
+        } else if (task.assignee.split(" ").length === 1) {
+            initials = `${task.assignee.split(" ")[0].slice(0, 2).toUpperCase()}`;
+        } else {
+            initials = task.assignee.split(" ")[0][0].toUpperCase() + task.assignee.split(" ")[1][0].toUpperCase();
+        }
 
         return (
             <div className='task-show-top'>
@@ -26,7 +36,7 @@ class TaskShow extends React.Component {
                 </div>
                 <div className='task-show-row-one'>
                     <div className='task-show-grouping' id="assigned-to">
-                        <div className='task-show-circle' id='task-show-circle-initials'>JJ</div>
+                        <div className='task-show-circle' id='task-show-circle-initials'>{initials}</div>
                         <div className='task-show-col'>
                             <div className='task-show-label'>Assigned To</div>
                             <div id='task-show-assignee'>{task.assignee}</div>
