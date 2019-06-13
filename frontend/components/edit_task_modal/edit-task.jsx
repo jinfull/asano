@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 
+import { updateTask } from '../../actions/task_actions';
 import { closeModal } from '../../actions/modal_actions';
 
 class EditTaskModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.task;
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // componentDidMount() {
@@ -17,31 +18,35 @@ class EditTaskModal extends React.Component {
   // }
 
   update(field) {
+    debugger
     return (e) => this.setState({
       [field]: e.currentTarget.value
     });
   }
 
-  // handleSubmit(e) { 
-  //   e.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
 
-  //   const task = Object.assign({}, this.state);
+    const task = Object.assign({}, this.state);
 
-  //   this.props.updateTask(task).then(() => {
-  //     this.props.history.push('/#');
-  //     this.setState({
-  //       name: '',
-  //       description: '',
+    console.log(this.props);
+    console.log(this.state);
 
-  //     });
-  //   });
-  // }
+    this.props.updateTask(task).then(() => {
+      this.props.history.push(`/projects/${this.state.project_id}/tasks/${this.state.id}`);
+      this.setState({
+        name: '',
+        due_date: '',
+        assignee_id: '',
+        description: ''
+      });
+      this.props.closeModal();
+    });
+  }
 
 
   render() {
     if (!this.props.modal) return null;
-
-    console.log(this.state);
 
     return (
       <div className="modal-background" onClick={this.props.closeModal}>
@@ -64,10 +69,17 @@ class EditTaskModal extends React.Component {
               </div>
 
               <div className="edit-task-modal-mid-row">
+
+
+
+
                 <div className='project-name-div' id="edit-due-date">
                   <label className='project-form-label' id='project-submit-name'>Due Date</label>
                   <br />
                   <DatePicker
+                    // selected={this.state.startDate}
+                    // onChange={this.handleChange}
+                    onSelect={this.handleSelect} 
                     type='date'
                     className='task-input'
                     id='project-input-name'
@@ -76,6 +88,9 @@ class EditTaskModal extends React.Component {
                   />
                   <br />
                 </div>
+
+
+
                 <div className='project-name-div' id="edit-assignee">
                   <label className='project-form-label' id='project-submit-name'>Assignee</label>
                   <br />
@@ -127,10 +142,10 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
   return {
     closeModal: () => dispatch(closeModal()),
-    fetchTask: taskId => dispatch(fetchTask(taskId)),
+    // fetchTask: taskId => dispatch(fetchTask(taskId)),
     updateTask: task => dispatch(updateTask(task))
   };
 };
 
 
-export default connect(mSTP, mDTP)(EditTaskModal);
+export default withRouter(connect(mSTP, mDTP)(EditTaskModal));
