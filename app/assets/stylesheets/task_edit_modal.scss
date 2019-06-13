@@ -19,6 +19,38 @@
     width: 500px;
 }
 
+.edit-task-modal-mid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#edit-due-date {
+  width: 225px;
+  padding-right: 0px;
+}
+
+#edit-assignee {
+  width: 225px;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+
+.task-input {
+  border: 1px solid #d5dce0;
+  border-radius: 2.5px;
+  // width: 460px;
+  margin: 2% 0% 2% 0%;
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 94.5%;
+}
+
+
+
+
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow,
 .react-datepicker__month-read-view--down-arrow,
 .react-datepicker__month-year-read-view--down-arrow {

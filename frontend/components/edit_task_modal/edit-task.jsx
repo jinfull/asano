@@ -63,18 +63,33 @@ class EditTaskModal extends React.Component {
                 <br />
               </div>
 
-              <div className='project-name-div'>
-                <label className='project-form-label' id='project-submit-name'>Due Date</label>
-                <br />
-                <DatePicker
-                  type='date'
-                  className='project-input'
-                  id='project-input-name'
-                  value={this.state.due_date}
-                  onChange={this.update('due_date')}
-                />
-                <br />
+              <div className="edit-task-modal-mid-row">
+                <div className='project-name-div' id="edit-due-date">
+                  <label className='project-form-label' id='project-submit-name'>Due Date</label>
+                  <br />
+                  <DatePicker
+                    type='date'
+                    className='task-input'
+                    id='project-input-name'
+                    value={this.state.due_date}
+                    onChange={this.update('due_date')}
+                  />
+                  <br />
+                </div>
+                <div className='project-name-div' id="edit-assignee">
+                  <label className='project-form-label' id='project-submit-name'>Assignee</label>
+                  <br />
+                  <input
+                    type='text'
+                    className='task-input'
+                    id='project-input-name'
+                    value={this.state.assignee_id}
+                    onChange={this.update('assignee_id')}
+                  />
+                  <br />
+                </div>
               </div>
+
 
               <div className='project-description-div'>
                 <label className='project-form-label' id='project-submit-description'>Description</label>
