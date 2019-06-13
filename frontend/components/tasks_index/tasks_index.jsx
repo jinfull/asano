@@ -10,7 +10,7 @@ class TasksIndex extends React.Component {
             name: '',
             completed: true,
             description: '',
-            assignee_id: '',
+            assignee: '',
             due_date: ''
         };
 
@@ -46,7 +46,7 @@ class TasksIndex extends React.Component {
                     name: '',
                     completed: 'true',
                     description: '',
-                    assignee_id: '',
+                    assignee: '',
                     due_date: ''
                 });
             });

@@ -15,8 +15,6 @@ class TaskShow extends React.Component {
 
         if (!task) return null;
 
-        // console.log(task.id);
-
         return (
             <div className='task-show-top'>
                 <div id="task-show-header">
@@ -31,7 +29,7 @@ class TaskShow extends React.Component {
                         <div className='task-show-circle' id='task-show-circle-initials'>JJ</div>
                         <div className='task-show-col'>
                             <div className='task-show-label'>Assigned To</div>
-                            <div id='task-show-assignee'>{task.assignee_id}</div>
+                            <div id='task-show-assignee'>{task.assignee}</div>
                         </div>
                     </div>
                     <div className='task-show-grouping'>

@@ -36,7 +36,7 @@ class EditTaskModal extends React.Component {
       this.setState({
         name: '',
         due_date: '',
-        assignee_id: '',
+        assignee: '',
         description: ''
       });
       this.props.closeModal();
@@ -69,6 +69,18 @@ class EditTaskModal extends React.Component {
 
               <div className="edit-task-modal-mid-row">
 
+                <div className='project-name-div' id="edit-assignee">
+                  <label className='project-form-label' id='project-submit-name'>Assignee</label>
+                  <br />
+                  <input
+                    type='text'
+                    className='task-input'
+                    id='project-input-name'
+                    value={this.state.assignee}
+                    onChange={this.update('assignee')}
+                  />
+                  <br />
+                </div>
 
 
 
@@ -85,25 +97,12 @@ class EditTaskModal extends React.Component {
                     value={this.state.due_date}
                     onChange={this.update('due_date')}
                     type='date'
-                    isClearable={false}
                   />
                   <br />
                 </div>
 
 
 
-                <div className='project-name-div' id="edit-assignee">
-                  <label className='project-form-label' id='project-submit-name'>Assignee</label>
-                  <br />
-                  <input
-                    type='text'
-                    className='task-input'
-                    id='project-input-name'
-                    value={this.state.assignee_id}
-                    onChange={this.update('assignee_id')}
-                  />
-                  <br />
-                </div>
               </div>
 
 
