@@ -18,7 +18,6 @@ class EditTaskModal extends React.Component {
   // }
 
   update(field) {
-    debugger
     return (e) => this.setState({
       [field]: e.currentTarget.value
     });
@@ -76,7 +75,7 @@ class EditTaskModal extends React.Component {
                 <div className='project-name-div' id="edit-due-date">
                   <label className='project-form-label' id='project-submit-name'>Due Date</label>
                   <br />
-                  <DatePicker
+                  <input
                     // selected={this.state.startDate}
                     // onChange={this.handleChange}
                     onSelect={this.handleSelect} 
@@ -85,6 +84,8 @@ class EditTaskModal extends React.Component {
                     id='project-input-name'
                     value={this.state.due_date}
                     onChange={this.update('due_date')}
+                    type='date'
+                    isClearable={false}
                   />
                   <br />
                 </div>
