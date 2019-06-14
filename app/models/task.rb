@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-    validates :creator_id, :project_id, :name, :completed, presence: true
+    validates :creator_id, :project_id, :name, presence: true
     validates :completed, inclusion: { in: [ true, false ] }
 
     belongs_to :project,

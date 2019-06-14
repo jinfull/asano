@@ -14,6 +14,8 @@ class TaskShow extends React.Component {
         const task = this.props.task;
         let initials;
 
+        console.log(task);
+
         if (!task) return null;
 
 
