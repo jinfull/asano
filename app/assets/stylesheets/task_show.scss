@@ -143,9 +143,26 @@
   fill: #222b37;
 }
 
+#task-completed-button {
+    background-color: #25e8c8;
+  border-color: #25e8c8;
+  color: white;
+  fill: white;
 
-.mark-complete-check-icon { 
+}
+
+#task-completed-button:hover {
+  background-color: #00bf9c;
+  border-color: #00bf9c;
+  color: white;
+  fill: white;
+
+}
+
+
+.check-icon { 
   height: 16px;
   width: 16px;
   margin-right: 5px;
 }
+

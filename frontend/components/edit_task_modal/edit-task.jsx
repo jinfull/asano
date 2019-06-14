@@ -28,9 +28,6 @@ class EditTaskModal extends React.Component {
 
     const task = Object.assign({}, this.state);
 
-    console.log(this.props);
-    console.log(this.state);
-
     this.props.updateTask(task).then(() => {
       this.props.history.push(`/projects/${this.state.project_id}/tasks/${this.state.id}`);
       this.setState({
