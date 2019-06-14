@@ -24,6 +24,7 @@
     line-height: 32px;
     cursor: pointer;
     width: 89%;
+    padding-top: 20px;
 }
 
 .task-show-row-one {
@@ -55,7 +56,6 @@
     display: flex;
     flex-direction: row;
     cursor: pointer;
-
 }
 
 
@@ -109,4 +109,43 @@
 
 #assigned-to {
     margin-right: 25px;
+}
+
+#task-show-mark-complete {
+    border-bottom: 2px solid #edf1f2;
+
+}
+
+#task-mark-complete-button {
+  color: white;
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 8px 13px;
+  margin-left: 20px;
+  background-color: #14aaf5;
+  border: none;
+
+  margin-bottom: 16px;
+
+
+    background: #fff;
+    border-color: #b7bfc6;
+    color: #646f79;
+    fill: #848f99;
+    border: 1px solid #b7bfc6;
+
+}
+
+#task-mark-complete-button:hover {
+  background-color: #f6f8f9;
+  border-color: #646f79;
+  color: #222b37;
+  fill: #222b37;
+}
+
+
+.mark-complete-check-icon { 
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
 }
