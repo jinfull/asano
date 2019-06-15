@@ -68,7 +68,14 @@ class TasksIndex extends React.Component {
 
         // if (!tasks) return null;
 
-        let tasks = this.props.tasks.map(task => {
+
+        let incompleteTasks = this.props.tasks.filter(task => {
+            if (!task.completed) return task;
+        })
+
+        console.log(this.props.tasks);
+
+        let tasks = incompleteTasks.map(task => {
             return (
                 <div key={task.id} className='div-li-container'>
                     <Link to={`/projects/${task.project_id}/tasks/${task.id}`} className='link-to-task-show'>
@@ -77,6 +84,11 @@ class TasksIndex extends React.Component {
                 </div>
             )
         })
+
+        console.log(tasks)
+
+
+        // console.log(evenTasks);
 
         return (
             <div className='tasks-index-container'>
