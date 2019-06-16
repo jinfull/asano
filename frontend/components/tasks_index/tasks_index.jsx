@@ -57,7 +57,7 @@ class TasksIndex extends React.Component {
             if (!task.completed) return task;
         });
 
-        let tasks = incompleteTasks.map(task => {
+        let tasks = this.props.tasks.map(task => {
             return (
                 <div key={task.id} className='div-li-container'>
                     <Link to={`/projects/${task.project_id}/tasks/${task.id}`} className='link-to-task-show'>
