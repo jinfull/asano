@@ -53,27 +53,9 @@ class TasksIndex extends React.Component {
     }
     
     render() {
-
-        // const fetchedTasks = this.props.fetchedTasks.map(task => {
-        //     return(
-        //         <div key={task.id} className='div-li-container'>
-        //             <li key={task.id} className='task-li-item'>
-        //                 {task.name}
-        //             </li>
-        //         </div>
-        //     )
-        // })
-
-        // let tasks = this.props.tasks;
-
-        // if (!tasks) return null;
-
-
         let incompleteTasks = this.props.tasks.filter(task => {
             if (!task.completed) return task;
-        })
-
-        console.log(this.props.tasks);
+        });
 
         let tasks = incompleteTasks.map(task => {
             return (
@@ -84,11 +66,6 @@ class TasksIndex extends React.Component {
                 </div>
             )
         })
-
-        console.log(tasks)
-
-
-        // console.log(evenTasks);
 
         return (
             <div className='tasks-index-container'>
