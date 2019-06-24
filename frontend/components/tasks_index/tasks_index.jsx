@@ -8,7 +8,7 @@ class TasksIndex extends React.Component {
         super(props);
         this.state = {
             name: '',
-            completed: true,
+            completed: false,
             description: '',
             assignee: '',
             due_date: ''
@@ -44,7 +44,7 @@ class TasksIndex extends React.Component {
                 // this.props.history.push(`/projects/${this.props.projectId}/tasks/${task.id}`);
                 this.setState({
                     name: '',
-                    completed: 'true',
+                    completed: false,
                     description: '',
                     assignee: '',
                     due_date: ''
