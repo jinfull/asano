@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import DatePicker from 'react-datepicker';
 
 import { updateTask } from '../../actions/task_actions';
 import { closeModal } from '../../actions/modal_actions';
@@ -12,10 +11,6 @@ class EditTaskModal extends React.Component {
     this.state = this.props.task;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  // componentDidMount() {
-  //   this.props.fetchTask(this.props.task.id);
-  // }
 
   update(field) {
     return (e) => this.setState({
@@ -85,8 +80,6 @@ class EditTaskModal extends React.Component {
                   <label className='project-form-label' id='project-submit-name'>Due Date</label>
                   <br />
                   <input
-                    // selected={this.state.startDate}
-                    // onChange={this.handleChange}
                     onSelect={this.handleSelect} 
                     type='date'
                     className='task-input'
@@ -139,7 +132,6 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
   return {
     closeModal: () => dispatch(closeModal()),
-    // fetchTask: taskId => dispatch(fetchTask(taskId)),
     updateTask: task => dispatch(updateTask(task))
   };
 };
