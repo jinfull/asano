@@ -6,11 +6,6 @@ class Project < ApplicationRecord
         foreign_key: :owner_id,
         class_name: :User
 
-    # belongs_to :team,
-    #     primary_key: :id,
-    #     foreign_key: :team_id,
-    #     class_name: :Team
-
     has_many :tasks,
         primary_key: :id,
         foreign_key: :project_id,
